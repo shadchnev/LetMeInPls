@@ -19,12 +19,16 @@ task :after_deploy do
   run "#{current_path}/script/packageffext"
 end
 
-task :start, :roles => :app do
+namespace :passenger do
+  desc "Restart Application"
+  task :restart, :roles => :app do
+    run "touch #{current_path}/tmp/restart.txt"
+  end
 end
 
-task :restart, :roles => :app do
-end
-
-task :after_update_code, :roles => :app do
-
+namespace :deploy do
+  desc "Restart the Passenger system."
+  task :restart, :roles => :app do
+    passenger.restart
+  end
 end
