@@ -9,20 +9,20 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090603171525) do
+ActiveRecord::Schema.define(:version => 20090604070114) do
 
   create_table "accounts", :force => true do |t|
-    t.string   "login"
-    t.string   "password"
-    t.integer  "site_id"
-    t.integer  "up"
-    t.integer  "down"
+    t.string   "login",                     :null => false
+    t.string   "password",                  :null => false
+    t.integer  "site_id",                   :null => false
+    t.integer  "up",         :default => 0, :null => false
+    t.integer  "down",       :default => 0, :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "author"
   end
 
   create_table "sites", :force => true do |t|
-    t.string   "name"
     t.string   "url"
     t.string   "regex"
     t.datetime "created_at"

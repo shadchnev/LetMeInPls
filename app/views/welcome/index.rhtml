@@ -1,11 +1,48 @@
-<h1>Let me in, pls!</h1>
-
-<h2>Sites</h2>
+<h3><%= @sites.size %> sites with passwords</h3>
 <% @sites.each do |site| %>
-  <h3><%= site.name %></h3>
+  <h4><%= link_to site.name, site.url %></h4>
   <ul>
   <% site.accounts.each do |account| %>
-    <li><%= account.login %> / <%= account.password%></li>
+    <li>      
+      <span id="account"><%= h(account.login) %> / <%= h(account.password) %></span>
+      <span id="vote-up"><%= '+' + account.up.to_s %></span>&nbsp;      
+      <span id="vote-down"><%= '–' + account.down.to_s %></span>&nbsp;
+      <% unless account.author.blank? %>
+        (by <%= h(account.author) %>)
+      <% end %>
+    </li>
   <% end %>
-  </ul>
+  <div id='new-account-form-<%= site.id %>' style="display:none;">
+    <% form_for @account do |f| %>
+    <%= hidden_field :site, :id, {:value => site.id} %>
+    <p>
+        Login:<br />
+        <%= f.text_field :login %>
+    </p>
+    <p>
+        Password:<br />
+        <%= f.text_field :password %>
+    </p>
+    <p>
+        Your name (optional):<br />
+        <%= f.text_field :author %>
+    </p>
+    <p>
+        <%= submit_tag %>
+    </p>
+    <% end %>
+  </div>
+  <%= link_to "Add a new account", 'javascript:showAddAccountForm(\'' + site.id.to_s + '\');', :id => 'new-account-link-' + site.id.to_s %>  </ul>
 <% end %>
+<div id='new-site-form' style="display:none;">
+  <% form_for @site do |f| %>
+  <p>
+      Address (e.g. http://www.vkontakte.ru/):<br />
+      <%= f.text_field :url %>
+  </p>
+  <p>
+      <%= submit_tag %>
+  </p>
+  <% end %>
+</div>
+<%= link_to "Add a new site", 'javascript:showAddSiteForm();', :id => 'new-site-link' %>

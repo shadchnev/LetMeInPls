@@ -16,7 +16,8 @@ test:
   timeout: 5000
 
 production:
-  adapter: sqlite3
-  database: db/production.sqlite3
-  pool: 5
+  adapter: mysql
+  database: letmeinplease_production  
+  user: deploy
+  password: letmeinplease
   timeout: 5000

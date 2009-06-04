@@ -422,3 +422,3146 @@ The error occurred while evaluating nil.accounts):
 Rendered rescues/_trace (46.9ms)
 Rendered rescues/_request_and_response (0.4ms)
 Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.7ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateSites (20090603171355)
+Migrating to CreateAccounts (20090603171525)
+Migrating to AddAuthorToAccount (20090604070114)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mALTER TABLE "accounts" ADD "author" varchar(255)[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090604070114')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("accounts")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("sites")[0m
+
+
+Processing SiteController#search (for 127.0.0.1 at 2009-06-04 08:02:44) [GET]
+  Parameters: {"url"=>"http://localhost:3000/"}
+  [4;35;1mSite Load (0.2ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."url" = 'localhost:3000') LIMIT 1[0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.accounts):
+  app/controllers/site_controller.rb:12:in `search'
+  app/controllers/site_controller.rb:10:in `search'
+
+Rendered rescues/_trace (95.9ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2009-06-04 08:02:45) [GET]
+  [4;36;1mSite Load (0.7ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering welcome/index
+  [4;35;1mAccount Load (0.5ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts".site_id = 1) [0m
+Completed in 126ms (View: 19, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing SiteController#search (for 127.0.0.1 at 2009-06-04 08:02:45) [GET]
+  Parameters: {"url"=>"http://localhost:3000/"}
+  [4;36;1mSite Load (0.2ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."url" = 'localhost:3000') LIMIT 1[0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.accounts):
+  app/controllers/site_controller.rb:12:in `search'
+  app/controllers/site_controller.rb:10:in `search'
+
+Rendered rescues/_trace (54.6ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2009-06-04 08:02:47) [GET]
+  [4;35;1mSite Load (0.6ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering welcome/index
+  [4;36;1mAccount Load (0.4ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts".site_id = 1) [0m
+Completed in 16ms (View: 10, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing SiteController#search (for 127.0.0.1 at 2009-06-04 08:02:47) [GET]
+  Parameters: {"url"=>"http://localhost:3000/"}
+  [4;35;1mSite Load (1.5ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."url" = 'localhost:3000') LIMIT 1[0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.accounts):
+  app/controllers/site_controller.rb:12:in `search'
+  app/controllers/site_controller.rb:10:in `search'
+
+Rendered rescues/_trace (61.1ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2009-06-04 08:03:00) [GET]
+  [4;36;1mSite Load (0.6ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering welcome/index
+  [4;35;1mAccount Load (0.3ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts".site_id = 1) [0m
+Completed in 14ms (View: 8, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing SiteController#search (for 127.0.0.1 at 2009-06-04 08:03:00) [GET]
+  Parameters: {"url"=>"http://localhost:3000/"}
+  [4;36;1mSite Load (0.2ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."url" = 'localhost:3000') LIMIT 1[0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.accounts):
+  app/controllers/site_controller.rb:12:in `search'
+  app/controllers/site_controller.rb:10:in `search'
+
+Rendered rescues/_trace (42.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SiteController#search (for 127.0.0.1 at 2009-06-04 08:22:40) [GET]
+  Parameters: {"url"=>"about:blank"}
+Rendering site/search
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://localhost/sites/search?url=about%3Ablank]
+
+
+Processing SiteController#search (for 127.0.0.1 at 2009-06-04 08:22:40) [GET]
+  Parameters: {"url"=>"about:blank"}
+Rendering site/search
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://localhost/sites/search?url=about%3Ablank]
+
+
+Processing SiteController#search (for 127.0.0.1 at 2009-06-04 08:22:43) [GET]
+  Parameters: {"url"=>"http://www.eapps.com/"}
+  [4;35;1mSite Load (0.2ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."url" = 'eapps.com') LIMIT 1[0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.accounts):
+  app/controllers/site_controller.rb:12:in `search'
+  app/controllers/site_controller.rb:10:in `search'
+
+Rendered rescues/_trace (43.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SiteController#search (for 127.0.0.1 at 2009-06-04 08:22:47) [GET]
+  Parameters: {"url"=>"https://support.eapps.com/visitor/index.php?_m=livesupport&_a=startclientchat&sessionid=7486259db6e1113705edca2733455cd2&proactive=0&departmentid=0&randno=46&fullname=&email="}
+Rendering site/search
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://localhost/sites/search?url=https%3A%2F%2Fsupport.eapps.com%2Fvisitor%2Findex.php%3F_m%3Dlivesupport%26_a%3Dstartclientchat%26sessionid%3D7486259db6e1113705edca2733455cd2%26proactive%3D0%26departmentid%3D0%26randno%3D46%26fullname%3D%26email%3D]
+
+
+Processing SiteController#search (for 127.0.0.1 at 2009-06-04 08:22:53) [GET]
+  Parameters: {"url"=>"https://support.eapps.com/visitor/index.php?_m=livesupport&_a=startclientchat&sessionid=7486259db6e1113705edca2733455cd2&proactive=0&departmentid=0&randno=53&fullname=&email="}
+Rendering site/search
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://localhost/sites/search?url=https%3A%2F%2Fsupport.eapps.com%2Fvisitor%2Findex.php%3F_m%3Dlivesupport%26_a%3Dstartclientchat%26sessionid%3D7486259db6e1113705edca2733455cd2%26proactive%3D0%26departmentid%3D0%26randno%3D53%26fullname%3D%26email%3D]
+
+
+Processing SiteController#search (for 127.0.0.1 at 2009-06-04 08:22:59) [GET]
+  Parameters: {"url"=>"https://support.eapps.com/visitor/index.php?_m=livesupport&_a=startclientchat&sessionid=7486259db6e1113705edca2733455cd2&proactive=0&departmentid=0&randno=58&fullname=&email="}
+Rendering site/search
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://localhost/sites/search?url=https%3A%2F%2Fsupport.eapps.com%2Fvisitor%2Findex.php%3F_m%3Dlivesupport%26_a%3Dstartclientchat%26sessionid%3D7486259db6e1113705edca2733455cd2%26proactive%3D0%26departmentid%3D0%26randno%3D58%26fullname%3D%26email%3D]
+
+
+Processing SiteController#search (for 127.0.0.1 at 2009-06-04 08:23:04) [GET]
+  Parameters: {"url"=>"https://support.eapps.com/visitor/index.php?_m=livesupport&_a=startclientchat&sessionid=7486259db6e1113705edca2733455cd2&proactive=0&departmentid=0&randno=3&fullname=&email="}
+Rendering site/search
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://localhost/sites/search?url=https%3A%2F%2Fsupport.eapps.com%2Fvisitor%2Findex.php%3F_m%3Dlivesupport%26_a%3Dstartclientchat%26sessionid%3D7486259db6e1113705edca2733455cd2%26proactive%3D0%26departmentid%3D0%26randno%3D3%26fullname%3D%26email%3D]
+
+
+Processing SiteController#search (for 127.0.0.1 at 2009-06-04 08:23:11) [GET]
+  Parameters: {"url"=>"https://support.eapps.com/visitor/index.php?_m=livesupport&_a=startclientchat&sessionid=7486259db6e1113705edca2733455cd2&proactive=0&departmentid=0&randno=10&fullname=&email="}
+Rendering site/search
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://localhost/sites/search?url=https%3A%2F%2Fsupport.eapps.com%2Fvisitor%2Findex.php%3F_m%3Dlivesupport%26_a%3Dstartclientchat%26sessionid%3D7486259db6e1113705edca2733455cd2%26proactive%3D0%26departmentid%3D0%26randno%3D10%26fullname%3D%26email%3D]
+
+
+Processing SiteController#search (for 127.0.0.1 at 2009-06-04 08:23:49) [GET]
+  Parameters: {"url"=>"https://support.eapps.com/visitor/index.php?_m=livesupport&_a=startclientchat&sessionid=7486259db6e1113705edca2733455cd2&proactive=0&departmentid=0&randno=48&fullname=&email="}
+Rendering site/search
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://localhost/sites/search?url=https%3A%2F%2Fsupport.eapps.com%2Fvisitor%2Findex.php%3F_m%3Dlivesupport%26_a%3Dstartclientchat%26sessionid%3D7486259db6e1113705edca2733455cd2%26proactive%3D0%26departmentid%3D0%26randno%3D48%26fullname%3D%26email%3D]
+
+
+Processing SiteController#search (for 127.0.0.1 at 2009-06-04 08:23:53) [GET]
+  Parameters: {"url"=>"http://www.eapps.com/"}
+  [4;36;1mSite Load (0.2ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."url" = 'eapps.com') LIMIT 1[0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.accounts):
+  app/controllers/site_controller.rb:12:in `search'
+  app/controllers/site_controller.rb:10:in `search'
+
+Rendered rescues/_trace (44.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SiteController#search (for 127.0.0.1 at 2009-06-04 08:24:17) [GET]
+  Parameters: {"url"=>"http://www.eapps.com/"}
+  [4;35;1mSite Load (0.2ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."url" = 'eapps.com') LIMIT 1[0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.accounts):
+  app/controllers/site_controller.rb:12:in `search'
+  app/controllers/site_controller.rb:10:in `search'
+
+Rendered rescues/_trace (55.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SiteController#search (for 127.0.0.1 at 2009-06-04 08:24:50) [GET]
+  Parameters: {"url"=>"about:blank"}
+Rendering site/search
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://localhost/sites/search?url=about%3Ablank]
+
+
+Processing SiteController#search (for 127.0.0.1 at 2009-06-04 08:24:50) [GET]
+  Parameters: {"url"=>"about:blank"}
+Rendering site/search
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://localhost/sites/search?url=about%3Ablank]
+
+
+Processing SiteController#search (for 127.0.0.1 at 2009-06-04 08:24:51) [GET]
+  Parameters: {"url"=>"http://www.eapps.com/"}
+  [4;36;1mSite Load (0.1ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."url" = 'eapps.com') LIMIT 1[0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.accounts):
+  app/controllers/site_controller.rb:12:in `search'
+  app/controllers/site_controller.rb:10:in `search'
+
+Rendered rescues/_trace (44.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SiteController#search (for 127.0.0.1 at 2009-06-04 08:24:53) [GET]
+  Parameters: {"url"=>"http://www.eapps.com/"}
+  [4;35;1mSite Load (0.1ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."url" = 'eapps.com') LIMIT 1[0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.accounts):
+  app/controllers/site_controller.rb:12:in `search'
+  app/controllers/site_controller.rb:10:in `search'
+
+Rendered rescues/_trace (49.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SiteController#search (for 127.0.0.1 at 2009-06-04 08:24:56) [GET]
+  Parameters: {"url"=>"https://support.eapps.com/visitor/index.php?_m=livesupport&_a=startclientchat&sessionid=7486259db6e1113705edca2733455cd2&proactive=0&departmentid=0&randno=56&fullname=&email="}
+Rendering site/search
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://localhost/sites/search?url=https%3A%2F%2Fsupport.eapps.com%2Fvisitor%2Findex.php%3F_m%3Dlivesupport%26_a%3Dstartclientchat%26sessionid%3D7486259db6e1113705edca2733455cd2%26proactive%3D0%26departmentid%3D0%26randno%3D56%26fullname%3D%26email%3D]
+
+
+Processing SiteController#search (for 127.0.0.1 at 2009-06-04 08:25:05) [GET]
+  Parameters: {"url"=>"https://support.eapps.com/visitor/index.php"}
+Rendering site/search
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://localhost/sites/search?url=https%3A%2F%2Fsupport.eapps.com%2Fvisitor%2Findex.php]
+
+
+Processing SiteController#search (for 127.0.0.1 at 2009-06-04 08:26:59) [GET]
+  Parameters: {"url"=>"http://localhost:3000/"}
+  [4;36;1mSite Load (0.2ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."url" = 'localhost:3000') LIMIT 1[0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.accounts):
+  app/controllers/site_controller.rb:12:in `search'
+  app/controllers/site_controller.rb:10:in `search'
+
+Rendered rescues/_trace (120.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2009-06-04 08:27:00) [GET]
+  [4;35;1mSite Load (0.6ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering welcome/index
+  [4;36;1mAccount Load (0.3ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts".site_id = 1) [0m
+Completed in 13ms (View: 8, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing SiteController#search (for 127.0.0.1 at 2009-06-04 08:27:00) [GET]
+  Parameters: {"url"=>"http://localhost:3000/"}
+  [4;35;1mSite Load (0.2ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."url" = 'localhost:3000') LIMIT 1[0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.accounts):
+  app/controllers/site_controller.rb:12:in `search'
+  app/controllers/site_controller.rb:10:in `search'
+
+Rendered rescues/_trace (49.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2009-06-04 08:28:23) [GET]
+  [4;36;1mSite Load (0.6ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering welcome/index
+  [4;35;1mAccount Load (0.4ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts".site_id = 1) [0m
+Completed in 17ms (View: 12, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing SiteController#search (for 127.0.0.1 at 2009-06-04 08:28:23) [GET]
+  Parameters: {"url"=>"http://localhost:3000/"}
+  [4;36;1mSite Load (0.2ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."url" = 'localhost:3000') LIMIT 1[0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.accounts):
+  app/controllers/site_controller.rb:12:in `search'
+  app/controllers/site_controller.rb:10:in `search'
+
+Rendered rescues/_trace (122.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2009-06-04 08:28:40) [GET]
+  [4;35;1mSite Load (0.7ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering welcome/index
+  [4;36;1mAccount Load (0.5ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts".site_id = 1) [0m
+Completed in 21ms (View: 14, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing SiteController#search (for 127.0.0.1 at 2009-06-04 08:28:40) [GET]
+  Parameters: {"url"=>"http://localhost:3000/"}
+  [4;35;1mSite Load (0.1ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."url" = 'localhost:3000') LIMIT 1[0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.accounts):
+  app/controllers/site_controller.rb:12:in `search'
+  app/controllers/site_controller.rb:10:in `search'
+
+Rendered rescues/_trace (51.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2009-06-04 08:29:11) [GET]
+  [4;36;1mSite Load (0.7ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering welcome/index
+  [4;35;1mAccount Load (0.4ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts".site_id = 1) [0m
+Completed in 21ms (View: 14, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing SiteController#search (for 127.0.0.1 at 2009-06-04 08:29:11) [GET]
+  Parameters: {"url"=>"http://localhost:3000/"}
+  [4;36;1mSite Load (0.2ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."url" = 'localhost:3000') LIMIT 1[0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.accounts):
+  app/controllers/site_controller.rb:12:in `search'
+  app/controllers/site_controller.rb:10:in `search'
+
+Rendered rescues/_trace (131.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSite Load (0.3ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 1) [0m
+  [4;35;1mSite Update (0.5ms)[0m   [0mUPDATE "sites" SET "url" = 'http://www.vkontakte.ru/', "updated_at" = '2009-06-04 07:29:46' WHERE "id" = 1[0m
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2009-06-04 08:29:48) [GET]
+  [4;35;1mSite Load (0.7ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering welcome/index
+  [4;36;1mAccount Load (0.4ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts".site_id = 1) [0m
+Completed in 18ms (View: 12, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing SiteController#search (for 127.0.0.1 at 2009-06-04 08:29:48) [GET]
+  Parameters: {"url"=>"http://localhost:3000/"}
+  [4;35;1mSite Load (0.1ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."url" = 'localhost:3000') LIMIT 1[0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.accounts):
+  app/controllers/site_controller.rb:12:in `search'
+  app/controllers/site_controller.rb:10:in `search'
+
+Rendered rescues/_trace (47.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2009-06-04 08:32:40) [GET]
+  [4;36;1mSite Load (0.6ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering welcome/index
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+ActionView::TemplateError (undefined local variable or method `match' for #<Class:0x24d9cf0>) on line #5 of app/views/welcome/index.rhtml:
+2: 
+3: <h2>Sites</h2>
+4: <% @sites.each do |site| %>
+5:   <h3><%= link_to site.name, site.url %></h3>
+6:   <ul>
+7:   <% site.accounts.each do |account| %>
+8:     <li>
+
+    app/models/site.rb:13:in `parse'
+    app/models/site.rb:6:in `name'
+    app/views/welcome/index.rhtml:5:in `_run_rhtml_app47views47welcome47index46rhtml'
+    app/views/welcome/index.rhtml:4:in `each'
+    app/views/welcome/index.rhtml:4:in `_run_rhtml_app47views47welcome47index46rhtml'
+
+Rendered rescues/_trace (126.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SiteController#search (for 127.0.0.1 at 2009-06-04 08:32:41) [GET]
+  Parameters: {"url"=>"http://localhost:3000/"}
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+NameError (undefined local variable or method `match' for #<Class:0x262346c>):
+  app/models/site.rb:13:in `parse'
+  app/controllers/site_controller.rb:5:in `search'
+
+Rendered rescues/_trace (49.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to AddAuthorToAccount (20090604070114)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mCREATE TEMPORARY TABLE "altered_accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "login" varchar(255), "password" varchar(255), "site_id" integer, "up" integer, "down" integer, "created_at" datetime, "updated_at" datetime, "author" varchar(255)) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("accounts")[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mDROP TABLE "accounts"[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "login" varchar(255), "password" varchar(255), "site_id" integer, "up" integer, "down" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("altered_accounts")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mDROP TABLE "altered_accounts"[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mDELETE FROM schema_migrations WHERE version = '20090604070114'[0m
+Migrating to CreateAccounts (20090603171525)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mDROP TABLE "accounts"[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mDELETE FROM schema_migrations WHERE version = '20090603171525'[0m
+Migrating to CreateSites (20090603171355)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mDROP TABLE "sites"[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mDELETE FROM schema_migrations WHERE version = '20090603171355'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateSites (20090603171355)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCREATE TABLE "sites" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "url" varchar(255), "regex" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090603171355')[0m
+Migrating to CreateAccounts (20090603171525)
+  [4;35;1mSQL (0.4ms)[0m   [0mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "login" varchar(255), "password" varchar(255), "site_id" integer, "up" integer, "down" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090603171525')[0m
+Migrating to AddAuthorToAccount (20090604070114)
+  [4;35;1mSQL (0.4ms)[0m   [0mALTER TABLE "accounts" ADD "author" varchar(255)[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090604070114')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("accounts")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("sites")[0m
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2009-06-04 08:36:46) [GET]
+
+SyntaxError (/Users/evgenyshadchnev/Projects/letmeinpls/app/models/site.rb:15: syntax error, unexpected '=', expecting tASSOC
+    {:domain => match[1], :full_url = full_url}
+                                     ^):
+  app/controllers/welcome_controller.rb:4:in `index'
+
+Rendered rescues/_trace (45.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SiteController#search (for 127.0.0.1 at 2009-06-04 08:36:46) [GET]
+  Parameters: {"url"=>"http://localhost:3000/"}
+
+SyntaxError (/Users/evgenyshadchnev/Projects/letmeinpls/app/models/site.rb:15: syntax error, unexpected '=', expecting tASSOC
+    {:domain => match[1], :full_url = full_url}
+                                     ^):
+  app/controllers/site_controller.rb:5:in `search'
+
+Rendered rescues/_trace (132.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2009-06-04 08:36:59) [GET]
+  [4;35;1mSite Load (0.5ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering welcome/index
+Completed in 7ms (View: 1, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing SiteController#search (for 127.0.0.1 at 2009-06-04 08:36:59) [GET]
+  Parameters: {"url"=>"http://localhost:3000/"}
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+NameError (undefined local variable or method `match' for #<Class:0x25be044>):
+  app/models/site.rb:13:in `parse'
+  app/controllers/site_controller.rb:5:in `search'
+
+Rendered rescues/_trace (42.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2009-06-04 08:37:01) [GET]
+  [4;35;1mSite Load (0.4ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering welcome/index
+Completed in 5ms (View: 1, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing SiteController#search (for 127.0.0.1 at 2009-06-04 08:37:01) [GET]
+  Parameters: {"url"=>"http://localhost:3000/"}
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+NameError (undefined local variable or method `match' for #<Class:0x24af8ec>):
+  app/models/site.rb:13:in `parse'
+  app/controllers/site_controller.rb:5:in `search'
+
+Rendered rescues/_trace (41.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2009-06-04 08:37:56) [GET]
+  [4;35;1mSite Load (0.4ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering welcome/index
+Completed in 88ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing SiteController#search (for 127.0.0.1 at 2009-06-04 08:37:56) [GET]
+  Parameters: {"url"=>"http://localhost:3000/"}
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+NameError (undefined local variable or method `match' for #<Class:0x2625898>):
+  app/models/site.rb:13:in `parse'
+  app/controllers/site_controller.rb:5:in `search'
+
+Rendered rescues/_trace (43.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2009-06-04 08:41:02) [GET]
+  [4;35;1mSite Load (0.5ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/application
+Rendering welcome/index
+Completed in 16ms (View: 10, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing SiteController#search (for 127.0.0.1 at 2009-06-04 08:41:02) [GET]
+  Parameters: {"url"=>"http://localhost:3000/"}
+  [4;36;1mSQL (0.7ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+NameError (undefined local variable or method `match' for #<Class:0x250cf9c>):
+  app/models/site.rb:13:in `parse'
+  app/controllers/site_controller.rb:5:in `search'
+
+Rendered rescues/_trace (47.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2009-06-04 08:42:59) [GET]
+  [4;35;1mSite Load (0.4ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/application
+Rendering welcome/index
+Completed in 10ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing SiteController#search (for 127.0.0.1 at 2009-06-04 08:42:59) [GET]
+  Parameters: {"url"=>"http://localhost:3000/"}
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+NameError (undefined local variable or method `match' for #<Class:0x23ef2e0>):
+  app/models/site.rb:13:in `parse'
+  app/controllers/site_controller.rb:5:in `search'
+
+Rendered rescues/_trace (40.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2009-06-04 08:43:51) [GET]
+  [4;35;1mSite Load (0.4ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/application
+Rendering welcome/index
+Completed in 9ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing SiteController#search (for 127.0.0.1 at 2009-06-04 08:43:51) [GET]
+  Parameters: {"url"=>"http://localhost:3000/"}
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+NameError (undefined local variable or method `match' for #<Class:0x2567fa0>):
+  app/models/site.rb:13:in `parse'
+  app/controllers/site_controller.rb:5:in `search'
+
+Rendered rescues/_trace (49.3ms)
+Rendered rescues/_request_and_response (1.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2009-06-04 08:44:06) [GET]
+  [4;35;1mSite Load (0.5ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/application
+Rendering welcome/index
+Completed in 8ms (View: 2, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-04 08:44:06) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/prototype.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-04 08:44:06) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/effects.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-04 08:44:06) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/dragdrop.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-04 08:44:06) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/controls.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing SiteController#search (for 127.0.0.1 at 2009-06-04 08:44:07) [GET]
+  Parameters: {"url"=>"http://localhost:3000/"}
+  [4;36;1mSQL (0.7ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+NameError (undefined local variable or method `match' for #<Class:0x2616ed8>):
+  app/models/site.rb:13:in `parse'
+  app/controllers/site_controller.rb:5:in `search'
+
+Rendered rescues/_trace (45.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2009-06-04 08:44:20) [GET]
+  [4;35;1mSite Load (0.5ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/application
+Rendering welcome/index
+Completed in 7ms (View: 2, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-04 08:44:20) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/prototype.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-04 08:44:20) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/effects.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-04 08:44:20) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/dragdrop.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-04 08:44:20) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/controls.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing SiteController#search (for 127.0.0.1 at 2009-06-04 08:44:20) [GET]
+  Parameters: {"url"=>"http://localhost:3000/"}
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+NameError (undefined local variable or method `match' for #<Class:0x2444164>):
+  app/models/site.rb:13:in `parse'
+  app/controllers/site_controller.rb:5:in `search'
+
+Rendered rescues/_trace (118.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SiteController#search (for 127.0.0.1 at 2009-06-04 08:44:31) [GET]
+  Parameters: {"url"=>"about:blank"}
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+NameError (undefined local variable or method `match' for #<Class:0x2626a04>):
+  app/models/site.rb:13:in `parse'
+  app/controllers/site_controller.rb:5:in `search'
+
+Rendered rescues/_trace (48.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SiteController#search (for 127.0.0.1 at 2009-06-04 08:44:31) [GET]
+  Parameters: {"url"=>"about:blank"}
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+NameError (undefined local variable or method `match' for #<Class:0x2552164>):
+  app/models/site.rb:13:in `parse'
+  app/controllers/site_controller.rb:5:in `search'
+
+Rendered rescues/_trace (40.7ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2009-06-04 08:44:33) [GET]
+  [4;35;1mSite Load (0.4ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/application
+Rendering welcome/index
+Completed in 6ms (View: 2, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-04 08:44:33) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/prototype.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-04 08:44:33) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/effects.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-04 08:44:33) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/dragdrop.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-04 08:44:33) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/controls.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing SiteController#search (for 127.0.0.1 at 2009-06-04 08:44:33) [GET]
+  Parameters: {"url"=>"http://localhost:3000/"}
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+NameError (undefined local variable or method `match' for #<Class:0x261d198>):
+  app/models/site.rb:13:in `parse'
+  app/controllers/site_controller.rb:5:in `search'
+
+Rendered rescues/_trace (44.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2009-06-04 08:44:35) [GET]
+  [4;35;1mSite Load (1.3ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/application
+Rendering welcome/index
+Completed in 11ms (View: 2, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2009-06-04 08:44:47) [GET]
+  [4;36;1mSite Load (0.4ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/application
+Rendering welcome/index
+Completed in 9ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing SiteController#search (for 127.0.0.1 at 2009-06-04 08:44:48) [GET]
+  Parameters: {"url"=>"http://localhost:3000/"}
+  [4;35;1mSQL (0.7ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+NameError (undefined local variable or method `match' for #<Class:0x24d617c>):
+  app/models/site.rb:13:in `parse'
+  app/controllers/site_controller.rb:5:in `search'
+
+Rendered rescues/_trace (47.1ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSite Create (4.9ms)[0m   [0;1mINSERT INTO "sites" ("regex", "updated_at", "url", "created_at") VALUES(NULL, '2009-06-04 07:45:04', 'http://www.vkontakte.ru/', '2009-06-04 07:45:04')[0m
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2009-06-04 08:45:05) [GET]
+  [4;36;1mSite Load (0.9ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/application
+Rendering welcome/index
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+ActionView::TemplateError (undefined local variable or method `match' for #<Class:0x23f9f88>) on line #5 of app/views/welcome/index.rhtml:
+2: 
+3: <h2>Sites</h2>
+4: <% @sites.each do |site| %>
+5:   <h3><%= link_to site.name, site.url %></h3>
+6:   <ul>
+7:   <% site.accounts.each do |account| %>
+8:     <li>
+
+    app/models/site.rb:13:in `parse'
+    app/models/site.rb:6:in `name'
+    app/views/welcome/index.rhtml:5:in `_run_rhtml_app47views47welcome47index46rhtml'
+    app/views/welcome/index.rhtml:4:in `each'
+    app/views/welcome/index.rhtml:4:in `_run_rhtml_app47views47welcome47index46rhtml'
+
+Rendered rescues/_trace (50.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SiteController#search (for 127.0.0.1 at 2009-06-04 08:45:05) [GET]
+  Parameters: {"url"=>"http://localhost:3000/"}
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+NameError (undefined local variable or method `match' for #<Class:0x255d190>):
+  app/models/site.rb:13:in `parse'
+  app/controllers/site_controller.rb:5:in `search'
+
+Rendered rescues/_trace (43.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2009-06-04 08:45:38) [GET]
+  [4;35;1mSite Load (0.6ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/application
+Rendering welcome/index
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts".site_id = 1) [0m
+Completed in 12ms (View: 6, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing SiteController#search (for 127.0.0.1 at 2009-06-04 08:45:38) [GET]
+  Parameters: {"url"=>"http://localhost:3000/"}
+  [4;35;1mSite Load (0.2ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."url" = 'http://localhost:3000') LIMIT 1[0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.accounts):
+  app/controllers/site_controller.rb:10:in `search'
+  app/controllers/site_controller.rb:8:in `search'
+
+Rendered rescues/_trace (124.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2009-06-04 08:47:03) [GET]
+  [4;36;1mSite Load (0.6ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/application
+Rendering welcome/index
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts".site_id = 1) [0m
+Completed in 17ms (View: 11, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing SiteController#search (for 127.0.0.1 at 2009-06-04 08:47:03) [GET]
+  Parameters: {"url"=>"http://localhost:3000/"}
+  [4;36;1mSite Load (0.1ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."url" = 'http://localhost:3000') LIMIT 1[0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.accounts):
+  app/controllers/site_controller.rb:10:in `search'
+  app/controllers/site_controller.rb:8:in `search'
+
+Rendered rescues/_trace (48.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2009-06-04 08:47:41) [GET]
+  [4;35;1mSite Load (0.6ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/application
+Rendering welcome/index
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts".site_id = 1) [0m
+Completed in 15ms (View: 9, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing SiteController#search (for 127.0.0.1 at 2009-06-04 08:47:41) [GET]
+  Parameters: {"url"=>"http://localhost:3000/"}
+  [4;35;1mSite Load (0.2ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."url" = 'http://localhost:3000') LIMIT 1[0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.accounts):
+  app/controllers/site_controller.rb:10:in `search'
+  app/controllers/site_controller.rb:8:in `search'
+
+Rendered rescues/_trace (122.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2009-06-04 08:47:53) [GET]
+  [4;36;1mSite Load (0.6ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/application
+Rendering welcome/index
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts".site_id = 1) [0m
+Completed in 16ms (View: 10, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing SiteController#search (for 127.0.0.1 at 2009-06-04 08:47:53) [GET]
+  Parameters: {"url"=>"http://localhost:3000/"}
+  [4;36;1mSite Load (0.2ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."url" = 'http://localhost:3000') LIMIT 1[0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.accounts):
+  app/controllers/site_controller.rb:10:in `search'
+  app/controllers/site_controller.rb:8:in `search'
+
+Rendered rescues/_trace (48.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2009-06-04 08:48:30) [GET]
+  [4;35;1mSite Load (0.6ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/application
+Rendering welcome/index
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts".site_id = 1) [0m
+Completed in 17ms (View: 11, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing SiteController#search (for 127.0.0.1 at 2009-06-04 08:48:31) [GET]
+  Parameters: {"url"=>"http://localhost:3000/"}
+  [4;35;1mSite Load (0.2ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."url" = 'http://localhost:3000') LIMIT 1[0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.accounts):
+  app/controllers/site_controller.rb:10:in `search'
+  app/controllers/site_controller.rb:8:in `search'
+
+Rendered rescues/_trace (125.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2009-06-04 08:48:42) [GET]
+  [4;36;1mSite Load (0.6ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/application
+Rendering welcome/index
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts".site_id = 1) [0m
+Completed in 17ms (View: 11, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing SiteController#search (for 127.0.0.1 at 2009-06-04 08:48:42) [GET]
+  Parameters: {"url"=>"http://localhost:3000/"}
+  [4;36;1mSite Load (0.2ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."url" = 'http://localhost:3000') LIMIT 1[0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.accounts):
+  app/controllers/site_controller.rb:10:in `search'
+  app/controllers/site_controller.rb:8:in `search'
+
+Rendered rescues/_trace (46.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2009-06-04 08:51:25) [GET]
+  [4;35;1mSite Load (0.6ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/application
+Rendering welcome/index
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts".site_id = 1) [0m
+
+ActionView::TemplateError (undefined method `sites_path' for #<ActionView::Base:0x24ce97c>) on line #21 of app/views/welcome/index.rhtml:
+18:   <%= link_to "Add a new account", 'javascript:showAddAccountForm();', :id => 'new-account-link' %>  </ul>
+19: <% end %>
+20: <div id='new-site-form' style="display:none;">
+21:   <% form_for @site do |f| %>
+22:   <p>
+23:       Address (e.g. http://www.vkontakte.ru/):<br />
+24:       <%= f.text_field :url %>
+
+    app/views/welcome/index.rhtml:21:in `_run_rhtml_app47views47welcome47index46rhtml'
+
+Rendered rescues/_trace (134.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SiteController#search (for 127.0.0.1 at 2009-06-04 08:51:26) [GET]
+  Parameters: {"url"=>"http://localhost:3000/"}
+  [4;35;1mSite Load (0.2ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."url" = 'http://localhost:3000') LIMIT 1[0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.accounts):
+  app/controllers/site_controller.rb:10:in `search'
+  app/controllers/site_controller.rb:8:in `search'
+
+Rendered rescues/_trace (53.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2009-06-04 08:51:47) [GET]
+  [4;36;1mSite Load (0.8ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/application
+Rendering welcome/index
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts".site_id = 1) [0m
+Completed in 14ms (View: 7, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing SiteController#search (for 127.0.0.1 at 2009-06-04 08:51:47) [GET]
+  Parameters: {"url"=>"http://localhost:3000/"}
+  [4;36;1mSite Load (0.1ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."url" = 'http://localhost:3000') LIMIT 1[0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.accounts):
+  app/controllers/site_controller.rb:10:in `search'
+  app/controllers/site_controller.rb:8:in `search'
+
+Rendered rescues/_trace (126.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#create (for 127.0.0.1 at 2009-06-04 08:51:58) [POST]
+  Parameters: {"commit"=>"Save changes", "authenticity_token"=>"T8swbudiLKjZ2l4YG793clBcjzrJXmlSdO6wFwFe/qw=", "site"=>{"url"=>"http://www.mysite.com/"}}
+
+NameError (uninitialized constant SitesController):
+  
+
+Rendered rescues/_trace (40.1ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SiteController#search (for 127.0.0.1 at 2009-06-04 08:51:59) [GET]
+  Parameters: {"url"=>"http://localhost:3000/sites"}
+  [4;35;1mSite Load (0.2ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."url" = 'http://localhost:3000') LIMIT 1[0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.accounts):
+  app/controllers/site_controller.rb:10:in `search'
+  app/controllers/site_controller.rb:8:in `search'
+
+Rendered rescues/_trace (48.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SiteController#search (for 127.0.0.1 at 2009-06-04 08:52:09) [GET]
+  Parameters: {"url"=>"http://localhost:3000/"}
+  [4;36;1mSite Load (0.2ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."url" = 'http://localhost:3000') LIMIT 1[0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.accounts):
+  app/controllers/site_controller.rb:10:in `search'
+  app/controllers/site_controller.rb:8:in `search'
+
+Rendered rescues/_trace (123.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2009-06-04 08:52:09) [GET]
+  [4;35;1mSite Load (0.6ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/application
+Rendering welcome/index
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts".site_id = 1) [0m
+
+ActionView::TemplateError (undefined method `sites_path' for #<ActionView::Base:0x25db018>) on line #21 of app/views/welcome/index.rhtml:
+18:   <%= link_to "Add a new account", 'javascript:showAddAccountForm();', :id => 'new-account-link' %>  </ul>
+19: <% end %>
+20: <div id='new-site-form' style="display:none;">
+21:   <% form_for @site do |f| %>
+22:   <p>
+23:       Address (e.g. http://www.vkontakte.ru/):<br />
+24:       <%= f.text_field :url %>
+
+    app/views/welcome/index.rhtml:21:in `_run_rhtml_app47views47welcome47index46rhtml'
+
+Rendered rescues/_trace (51.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SiteController#search (for 127.0.0.1 at 2009-06-04 08:52:09) [GET]
+  Parameters: {"url"=>"http://localhost:3000/"}
+  [4;35;1mSite Load (0.2ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."url" = 'http://localhost:3000') LIMIT 1[0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.accounts):
+  app/controllers/site_controller.rb:10:in `search'
+  app/controllers/site_controller.rb:8:in `search'
+
+Rendered rescues/_trace (121.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2009-06-04 08:52:26) [GET]
+  [4;36;1mSite Load (0.6ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/application
+Rendering welcome/index
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts".site_id = 1) [0m
+Completed in 12ms (View: 6, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing SitesController#search (for 127.0.0.1 at 2009-06-04 08:52:26) [GET]
+  Parameters: {"url"=>"http://localhost:3000/"}
+  [4;36;1mSite Load (0.1ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."url" = 'http://localhost:3000') LIMIT 1[0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.accounts):
+  app/controllers/sites_controller.rb:10:in `search'
+  app/controllers/sites_controller.rb:8:in `search'
+
+Rendered rescues/_trace (47.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SitesController#create (for 127.0.0.1 at 2009-06-04 08:52:28) [POST]
+  Parameters: {"commit"=>"Save changes", "authenticity_token"=>"T8swbudiLKjZ2l4YG793clBcjzrJXmlSdO6wFwFe/qw=", "site"=>{"url"=>"http://www.mysite.com/"}}
+
+ActionController::UnknownAction (No action responded to create. Actions: search):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing SitesController#search (for 127.0.0.1 at 2009-06-04 08:52:28) [GET]
+  Parameters: {"url"=>"http://localhost:3000/sites"}
+  [4;35;1mSite Load (0.2ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."url" = 'http://localhost:3000') LIMIT 1[0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.accounts):
+  app/controllers/sites_controller.rb:10:in `search'
+  app/controllers/sites_controller.rb:8:in `search'
+
+Rendered rescues/_trace (122.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SitesController#search (for 127.0.0.1 at 2009-06-04 08:53:24) [GET]
+  Parameters: {"url"=>"http://localhost:3000/"}
+  [4;36;1mSite Load (0.2ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."url" = 'http://localhost:3000') LIMIT 1[0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.accounts):
+  app/controllers/sites_controller.rb:10:in `search'
+  app/controllers/sites_controller.rb:8:in `search'
+
+Rendered rescues/_trace (47.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2009-06-04 08:53:25) [GET]
+  [4;35;1mSite Load (0.6ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/application
+Rendering welcome/index
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts".site_id = 1) [0m
+Completed in 14ms (View: 7, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing SitesController#search (for 127.0.0.1 at 2009-06-04 08:53:25) [GET]
+  Parameters: {"url"=>"http://localhost:3000/"}
+  [4;35;1mSite Load (0.1ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."url" = 'http://localhost:3000') LIMIT 1[0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.accounts):
+  app/controllers/sites_controller.rb:10:in `search'
+  app/controllers/sites_controller.rb:8:in `search'
+
+Rendered rescues/_trace (49.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SitesController#create (for 127.0.0.1 at 2009-06-04 08:53:27) [POST]
+  Parameters: {"commit"=>"Save changes", "authenticity_token"=>"T8swbudiLKjZ2l4YG793clBcjzrJXmlSdO6wFwFe/qw=", "site"=>{"url"=>"http://www.mysite.com/"}}
+  [4;36;1mSite Create (0.5ms)[0m   [0;1mINSERT INTO "sites" ("regex", "updated_at", "url", "created_at") VALUES(NULL, '2009-06-04 07:53:27', NULL, '2009-06-04 07:53:27')[0m
+Redirected to http://localhost:3000/
+Completed in 10ms (DB: 1) | 302 Found [http://localhost/sites]
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2009-06-04 08:53:27) [GET]
+  [4;35;1mSite Load (0.7ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/application
+Rendering welcome/index
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts".site_id = 1) [0m
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.match) on line #5 of app/views/welcome/index.rhtml:
+2: 
+3: <h2>Sites</h2>
+4: <% @sites.each do |site| %>
+5:   <h3><%= link_to site.name, site.url %></h3>
+6:   <ul>
+7:   <% site.accounts.each do |account| %>
+8:     <li>
+
+    app/models/site.rb:12:in `parse'
+    app/models/site.rb:6:in `name'
+    app/views/welcome/index.rhtml:5:in `_run_rhtml_app47views47welcome47index46rhtml'
+    app/views/welcome/index.rhtml:4:in `each'
+    app/views/welcome/index.rhtml:4:in `_run_rhtml_app47views47welcome47index46rhtml'
+
+Rendered rescues/_trace (51.4ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SitesController#search (for 127.0.0.1 at 2009-06-04 08:53:27) [GET]
+  Parameters: {"url"=>"http://localhost:3000/"}
+  [4;35;1mSite Load (0.1ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."url" = 'http://localhost:3000') LIMIT 1[0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.accounts):
+  app/controllers/sites_controller.rb:10:in `search'
+  app/controllers/sites_controller.rb:8:in `search'
+
+Rendered rescues/_trace (52.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2009-06-04 08:54:27) [GET]
+  [4;36;1mSite Load (0.7ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/application
+Rendering welcome/index
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts".site_id = 1) [0m
+  [4;36;1mAccount Load (0.1ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts".site_id = 2) [0m
+Completed in 89ms (View: 83, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing SitesController#search (for 127.0.0.1 at 2009-06-04 08:54:27) [GET]
+  Parameters: {"url"=>"http://localhost:3000/"}
+  [4;35;1mSite Load (0.2ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."url" = 'http://localhost:3000') LIMIT 1[0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.accounts):
+  app/controllers/sites_controller.rb:10:in `search'
+  app/controllers/sites_controller.rb:8:in `search'
+
+Rendered rescues/_trace (49.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSite Load (0.4ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 2) [0m
+  [4;36;1mSite Destroy (0.8ms)[0m   [0;1mDELETE FROM "sites" WHERE "id" = 2[0m
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2009-06-04 08:54:47) [GET]
+  [4;36;1mSite Load (0.7ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/application
+Rendering welcome/index
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts".site_id = 1) [0m
+Completed in 16ms (View: 6, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing SitesController#search (for 127.0.0.1 at 2009-06-04 08:54:47) [GET]
+  Parameters: {"url"=>"http://localhost:3000/"}
+  [4;36;1mSite Load (0.1ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."url" = 'http://localhost:3000') LIMIT 1[0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.accounts):
+  app/controllers/sites_controller.rb:10:in `search'
+  app/controllers/sites_controller.rb:8:in `search'
+
+Rendered rescues/_trace (48.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SitesController#create (for 127.0.0.1 at 2009-06-04 08:54:52) [POST]
+  Parameters: {"commit"=>"Save changes", "authenticity_token"=>"T8swbudiLKjZ2l4YG793clBcjzrJXmlSdO6wFwFe/qw=", "site"=>{"url"=>"http://www.mysite.com/"}}
+Redirected to http://localhost:3000/
+Completed in 2ms (DB: 0) | 302 Found [http://localhost/sites]
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2009-06-04 08:54:52) [GET]
+  [4;35;1mSite Load (0.5ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/application
+Rendering welcome/index
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts".site_id = 1) [0m
+Completed in 85ms (View: 79, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing SitesController#search (for 127.0.0.1 at 2009-06-04 08:54:52) [GET]
+  Parameters: {"url"=>"http://localhost:3000/"}
+  [4;35;1mSite Load (0.2ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."url" = 'http://localhost:3000') LIMIT 1[0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.accounts):
+  app/controllers/sites_controller.rb:10:in `search'
+  app/controllers/sites_controller.rb:8:in `search'
+
+Rendered rescues/_trace (48.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2009-06-04 08:55:50) [GET]
+  [4;36;1mSite Load (0.6ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/application
+Rendering welcome/index
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts".site_id = 1) [0m
+Completed in 14ms (View: 7, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing SitesController#search (for 127.0.0.1 at 2009-06-04 08:55:50) [GET]
+  Parameters: {"url"=>"http://localhost:3000/"}
+  [4;36;1mSite Load (0.1ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."url" = 'http://localhost:3000') LIMIT 1[0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.accounts):
+  app/controllers/sites_controller.rb:10:in `search'
+  app/controllers/sites_controller.rb:8:in `search'
+
+Rendered rescues/_trace (49.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2009-06-04 08:55:56) [GET]
+  [4;35;1mSite Load (0.5ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/application
+Rendering welcome/index
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts".site_id = 1) [0m
+Completed in 12ms (View: 6, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing SitesController#search (for 127.0.0.1 at 2009-06-04 08:55:56) [GET]
+  Parameters: {"url"=>"http://localhost:3000/"}
+  [4;35;1mSite Load (0.2ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."url" = 'http://localhost:3000') LIMIT 1[0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.accounts):
+  app/controllers/sites_controller.rb:10:in `search'
+  app/controllers/sites_controller.rb:8:in `search'
+
+Rendered rescues/_trace (43.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SitesController#create (for 127.0.0.1 at 2009-06-04 08:56:02) [POST]
+  Parameters: {"commit"=>"Save changes", "authenticity_token"=>"T8swbudiLKjZ2l4YG793clBcjzrJXmlSdO6wFwFe/qw=", "site"=>{"url"=>"http://www.mysite.com/"}}
+
+TypeError (can't convert nil into String):
+  app/controllers/sites_controller.rb:16:in `+'
+  app/controllers/sites_controller.rb:16:in `create'
+
+Rendered rescues/_trace (39.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SitesController#search (for 127.0.0.1 at 2009-06-04 08:56:02) [GET]
+  Parameters: {"url"=>"http://localhost:3000/sites"}
+  [4;36;1mSite Load (0.1ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."url" = 'http://localhost:3000') LIMIT 1[0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.accounts):
+  app/controllers/sites_controller.rb:10:in `search'
+  app/controllers/sites_controller.rb:8:in `search'
+
+Rendered rescues/_trace (124.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SitesController#create (for 127.0.0.1 at 2009-06-04 08:56:19) [POST]
+  Parameters: {"commit"=>"Save changes", "authenticity_token"=>"T8swbudiLKjZ2l4YG793clBcjzrJXmlSdO6wFwFe/qw=", "site"=>{"url"=>"http://www.mysite.com/"}}
+Redirected to http://localhost:3000/
+Completed in 3ms (DB: 0) | 302 Found [http://localhost/sites]
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2009-06-04 08:56:19) [GET]
+  [4;35;1mSite Load (0.6ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/application
+Rendering welcome/index
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts".site_id = 1) [0m
+Completed in 12ms (View: 6, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing SitesController#search (for 127.0.0.1 at 2009-06-04 08:56:19) [GET]
+  Parameters: {"url"=>"http://localhost:3000/"}
+  [4;35;1mSite Load (0.1ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."url" = 'http://localhost:3000') LIMIT 1[0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.accounts):
+  app/controllers/sites_controller.rb:10:in `search'
+  app/controllers/sites_controller.rb:8:in `search'
+
+Rendered rescues/_trace (50.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SitesController#create (for 127.0.0.1 at 2009-06-04 08:56:44) [POST]
+  Parameters: {"commit"=>"Save changes", "authenticity_token"=>"T8swbudiLKjZ2l4YG793clBcjzrJXmlSdO6wFwFe/qw=", "site"=>{"url"=>"http://www.mysite.com/"}}
+  [4;36;1mSite Create (0.4ms)[0m   [0;1mINSERT INTO "sites" ("regex", "updated_at", "url", "created_at") VALUES(NULL, '2009-06-04 07:56:44', 'http://www.mysite.com/', '2009-06-04 07:56:44')[0m
+Redirected to http://localhost:3000/
+Completed in 11ms (DB: 0) | 302 Found [http://localhost/sites]
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2009-06-04 08:56:44) [GET]
+  [4;35;1mSite Load (0.8ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/application
+Rendering welcome/index
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts".site_id = 1) [0m
+  [4;35;1mAccount Load (0.1ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts".site_id = 3) [0m
+Completed in 14ms (View: 6, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing SitesController#search (for 127.0.0.1 at 2009-06-04 08:56:45) [GET]
+  Parameters: {"url"=>"http://localhost:3000/"}
+  [4;36;1mSite Load (0.1ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."url" = 'http://localhost:3000') LIMIT 1[0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.accounts):
+  app/controllers/sites_controller.rb:10:in `search'
+  app/controllers/sites_controller.rb:8:in `search'
+
+Rendered rescues/_trace (122.0ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SitesController#search (for 127.0.0.1 at 2009-06-04 08:56:51) [GET]
+  Parameters: {"url"=>"http://localhost:3000/"}
+  [4;35;1mSite Load (0.2ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."url" = 'http://localhost:3000') LIMIT 1[0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.accounts):
+  app/controllers/sites_controller.rb:10:in `search'
+  app/controllers/sites_controller.rb:8:in `search'
+
+Rendered rescues/_trace (52.3ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SitesController#search (for 127.0.0.1 at 2009-06-04 08:56:56) [GET]
+  Parameters: {"url"=>"http://www.mysite.com/"}
+  [4;36;1mSite Load (0.2ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."url" = 'http://mysite.com') LIMIT 1[0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.accounts):
+  app/controllers/sites_controller.rb:10:in `search'
+  app/controllers/sites_controller.rb:8:in `search'
+
+Rendered rescues/_trace (48.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SitesController#search (for 127.0.0.1 at 2009-06-04 08:56:57) [GET]
+  Parameters: {"url"=>"http://localhost:3000/"}
+  [4;35;1mSite Load (0.2ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."url" = 'http://localhost:3000') LIMIT 1[0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.accounts):
+  app/controllers/sites_controller.rb:10:in `search'
+  app/controllers/sites_controller.rb:8:in `search'
+
+Rendered rescues/_trace (117.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2009-06-04 08:58:09) [GET]
+  [4;36;1mSite Load (0.8ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/application
+Rendering welcome/index
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts".site_id = 1) [0m
+
+ActionView::TemplateError (undefined local variable or method `account' for #<ActionView::Base:0x25a826c>) on line #15 of app/views/welcome/index.rhtml:
+12:       <% end %>
+13:     </li>
+14:   <% end %>
+15:   <div id='new-account-form-'<%= account.id %> style="display:none;">
+16:     New account form
+17:   </div>
+18:   <%= link_to "Add a new account", 'javascript:showAddAccountForm(\'' + account.id + '\');', :id => 'new-account-link' %>  </ul>
+
+    app/views/welcome/index.rhtml:15:in `_run_rhtml_app47views47welcome47index46rhtml'
+    app/views/welcome/index.rhtml:4:in `each'
+    app/views/welcome/index.rhtml:4:in `_run_rhtml_app47views47welcome47index46rhtml'
+
+Rendered rescues/_trace (49.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SitesController#search (for 127.0.0.1 at 2009-06-04 08:58:10) [GET]
+  Parameters: {"url"=>"http://localhost:3000/"}
+  [4;36;1mSite Load (0.2ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."url" = 'http://localhost:3000') LIMIT 1[0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.accounts):
+  app/controllers/sites_controller.rb:10:in `search'
+  app/controllers/sites_controller.rb:8:in `search'
+
+Rendered rescues/_trace (126.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2009-06-04 08:58:30) [GET]
+  [4;35;1mSite Load (0.8ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/application
+Rendering welcome/index
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts".site_id = 1) [0m
+
+ActionView::TemplateError (can't convert Fixnum into String) on line #18 of app/views/welcome/index.rhtml:
+15:   <div id='new-account-form-'<%= site.id %> style="display:none;">
+16:     New account form
+17:   </div>
+18:   <%= link_to "Add a new account", 'javascript:showAddAccountForm(\'' + site.id + '\');', :id => 'new-account-link' %>  </ul>
+19: <% end %>
+20: <div id='new-site-form' style="display:none;">
+21:   <% form_for @site do |f| %>
+
+    app/views/welcome/index.rhtml:18:in `+'
+    app/views/welcome/index.rhtml:18:in `_run_rhtml_app47views47welcome47index46rhtml'
+    app/views/welcome/index.rhtml:4:in `each'
+    app/views/welcome/index.rhtml:4:in `_run_rhtml_app47views47welcome47index46rhtml'
+
+Rendered rescues/_trace (48.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SitesController#search (for 127.0.0.1 at 2009-06-04 08:58:30) [GET]
+  Parameters: {"url"=>"http://localhost:3000/"}
+  [4;35;1mSite Load (0.2ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."url" = 'http://localhost:3000') LIMIT 1[0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.accounts):
+  app/controllers/sites_controller.rb:10:in `search'
+  app/controllers/sites_controller.rb:8:in `search'
+
+Rendered rescues/_trace (126.5ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2009-06-04 08:58:39) [GET]
+  [4;36;1mSite Load (0.7ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/application
+Rendering welcome/index
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts".site_id = 1) [0m
+  [4;36;1mAccount Load (0.1ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts".site_id = 3) [0m
+Completed in 17ms (View: 11, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing SitesController#search (for 127.0.0.1 at 2009-06-04 08:58:39) [GET]
+  Parameters: {"url"=>"http://localhost:3000/"}
+  [4;35;1mSite Load (0.1ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."url" = 'http://localhost:3000') LIMIT 1[0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.accounts):
+  app/controllers/sites_controller.rb:10:in `search'
+  app/controllers/sites_controller.rb:8:in `search'
+
+Rendered rescues/_trace (49.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2009-06-04 08:59:35) [GET]
+  [4;36;1mSite Load (0.9ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/application
+Rendering welcome/index
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts".site_id = 1) [0m
+  [4;36;1mAccount Load (0.1ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts".site_id = 3) [0m
+Completed in 19ms (View: 11, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing SitesController#search (for 127.0.0.1 at 2009-06-04 08:59:36) [GET]
+  Parameters: {"url"=>"http://localhost:3000/"}
+  [4;35;1mSite Load (0.1ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."url" = 'http://localhost:3000') LIMIT 1[0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.accounts):
+  app/controllers/sites_controller.rb:10:in `search'
+  app/controllers/sites_controller.rb:8:in `search'
+
+Rendered rescues/_trace (123.7ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2009-06-04 08:59:53) [GET]
+  [4;36;1mSite Load (0.8ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/application
+Rendering welcome/index
+  [4;35;1mAccount Load (0.3ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts".site_id = 1) [0m
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts".site_id = 3) [0m
+Completed in 21ms (View: 13, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing SitesController#search (for 127.0.0.1 at 2009-06-04 08:59:53) [GET]
+  Parameters: {"url"=>"http://localhost:3000/"}
+  [4;35;1mSite Load (0.2ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."url" = 'http://localhost:3000') LIMIT 1[0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.accounts):
+  app/controllers/sites_controller.rb:10:in `search'
+  app/controllers/sites_controller.rb:8:in `search'
+
+Rendered rescues/_trace (46.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2009-06-04 09:00:18) [GET]
+  [4;36;1mSite Load (0.8ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/application
+Rendering welcome/index
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts".site_id = 1) [0m
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts".site_id = 3) [0m
+Completed in 20ms (View: 12, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing SitesController#search (for 127.0.0.1 at 2009-06-04 09:00:18) [GET]
+  Parameters: {"url"=>"http://localhost:3000/"}
+  [4;35;1mSite Load (0.2ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."url" = 'http://localhost:3000') LIMIT 1[0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.accounts):
+  app/controllers/sites_controller.rb:10:in `search'
+  app/controllers/sites_controller.rb:8:in `search'
+
+Rendered rescues/_trace (133.7ms)
+Rendered rescues/_request_and_response (0.9ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2009-06-04 09:01:22) [GET]
+  [4;36;1mSite Load (0.6ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/application
+Rendering welcome/index
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts".site_id = 1) [0m
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #16 of app/views/welcome/index.rhtml:
+13:     </li>
+14:   <% end %>
+15:   <div id='new-account-form-<%= site.id %>' style="display:none;">
+16:     <% form_for @account do |f| %>
+17:     <p>
+18:         Login:<br />
+19:         <%= f.text_field :login %>
+
+    app/views/welcome/index.rhtml:16:in `_run_rhtml_app47views47welcome47index46rhtml'
+    app/views/welcome/index.rhtml:4:in `each'
+    app/views/welcome/index.rhtml:4:in `_run_rhtml_app47views47welcome47index46rhtml'
+
+Rendered rescues/_trace (51.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SitesController#search (for 127.0.0.1 at 2009-06-04 09:01:22) [GET]
+  Parameters: {"url"=>"http://localhost:3000/"}
+  [4;36;1mSite Load (0.2ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."url" = 'http://localhost:3000') LIMIT 1[0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.accounts):
+  app/controllers/sites_controller.rb:10:in `search'
+  app/controllers/sites_controller.rb:8:in `search'
+
+Rendered rescues/_trace (50.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2009-06-04 09:01:37) [GET]
+  [4;35;1mSite Load (0.7ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/application
+Rendering welcome/index
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts".site_id = 1) [0m
+
+ActionView::TemplateError (undefined method `accounts_path' for #<ActionView::Base:0x23c71c8>) on line #16 of app/views/welcome/index.rhtml:
+13:     </li>
+14:   <% end %>
+15:   <div id='new-account-form-<%= site.id %>' style="display:none;">
+16:     <% form_for @account do |f| %>
+17:     <p>
+18:         Login:<br />
+19:         <%= f.text_field :login %>
+
+    app/views/welcome/index.rhtml:16:in `_run_rhtml_app47views47welcome47index46rhtml'
+    app/views/welcome/index.rhtml:4:in `each'
+    app/views/welcome/index.rhtml:4:in `_run_rhtml_app47views47welcome47index46rhtml'
+
+Rendered rescues/_trace (51.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SitesController#search (for 127.0.0.1 at 2009-06-04 09:01:38) [GET]
+  Parameters: {"url"=>"http://localhost:3000/"}
+  [4;35;1mSite Load (0.1ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."url" = 'http://localhost:3000') LIMIT 1[0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.accounts):
+  app/controllers/sites_controller.rb:10:in `search'
+  app/controllers/sites_controller.rb:8:in `search'
+
+Rendered rescues/_trace (48.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2009-06-04 09:02:08) [GET]
+  [4;36;1mSite Load (0.6ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/application
+Rendering welcome/index
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts".site_id = 1) [0m
+  [4;36;1mAccount Load (0.1ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts".site_id = 3) [0m
+Completed in 17ms (View: 7, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing SitesController#search (for 127.0.0.1 at 2009-06-04 09:02:09) [GET]
+  Parameters: {"url"=>"http://localhost:3000/"}
+  [4;35;1mSite Load (0.1ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."url" = 'http://localhost:3000') LIMIT 1[0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.accounts):
+  app/controllers/sites_controller.rb:10:in `search'
+  app/controllers/sites_controller.rb:8:in `search'
+
+Rendered rescues/_trace (47.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2009-06-04 09:05:17) [GET]
+  [4;36;1mSite Load (0.8ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/application
+Rendering welcome/index
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts".site_id = 1) [0m
+
+ActionView::TemplateError (undefined method `merge' for "13 ":String) on line #17 of app/views/welcome/index.rhtml:
+14:   <% end %>
+15:   <div id='new-account-form-<%= site.id %>' style="display:none;">
+16:     <% form_for @account do |f| %>
+17:     <%= f.hidden_field :site_id, '13 '%>
+18:     <p>
+19:         Login:<br />
+20:         <%= f.text_field :login %>
+
+    app/views/welcome/index.rhtml:17:in `_run_rhtml_app47views47welcome47index46rhtml'
+    app/views/welcome/index.rhtml:16:in `_run_rhtml_app47views47welcome47index46rhtml'
+    app/views/welcome/index.rhtml:4:in `each'
+    app/views/welcome/index.rhtml:4:in `_run_rhtml_app47views47welcome47index46rhtml'
+
+Rendered rescues/_trace (136.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SitesController#search (for 127.0.0.1 at 2009-06-04 09:05:17) [GET]
+  Parameters: {"url"=>"http://localhost:3000/"}
+  [4;36;1mSite Load (0.3ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."url" = 'http://localhost:3000') LIMIT 1[0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.accounts):
+  app/controllers/sites_controller.rb:10:in `search'
+  app/controllers/sites_controller.rb:8:in `search'
+
+Rendered rescues/_trace (44.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2009-06-04 09:06:25) [GET]
+  [4;35;1mSite Load (0.7ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/application
+Rendering welcome/index
+  [4;36;1mAccount Load (0.3ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts".site_id = 1) [0m
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts".site_id = 3) [0m
+Completed in 27ms (View: 14, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing SitesController#search (for 127.0.0.1 at 2009-06-04 09:06:26) [GET]
+  Parameters: {"url"=>"http://localhost:3000/"}
+  [4;36;1mSite Load (0.1ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."url" = 'http://localhost:3000') LIMIT 1[0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.accounts):
+  app/controllers/sites_controller.rb:10:in `search'
+  app/controllers/sites_controller.rb:8:in `search'
+
+Rendered rescues/_trace (48.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2009-06-04 09:06:31) [GET]
+  [4;35;1mSite Load (0.6ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/application
+Rendering welcome/index
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts".site_id = 1) [0m
+  [4;35;1mAccount Load (0.1ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts".site_id = 3) [0m
+Completed in 23ms (View: 12, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing SitesController#search (for 127.0.0.1 at 2009-06-04 09:06:31) [GET]
+  Parameters: {"url"=>"http://localhost:3000/"}
+  [4;36;1mSite Load (0.2ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."url" = 'http://localhost:3000') LIMIT 1[0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.accounts):
+  app/controllers/sites_controller.rb:10:in `search'
+  app/controllers/sites_controller.rb:8:in `search'
+
+Rendered rescues/_trace (47.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2009-06-04 09:07:09) [GET]
+  [4;35;1mSite Load (0.7ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/application
+Rendering welcome/index
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts".site_id = 1) [0m
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts".site_id = 3) [0m
+Completed in 25ms (View: 13, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing SitesController#search (for 127.0.0.1 at 2009-06-04 09:07:09) [GET]
+  Parameters: {"url"=>"http://localhost:3000/"}
+  [4;36;1mSite Load (0.2ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."url" = 'http://localhost:3000') LIMIT 1[0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.accounts):
+  app/controllers/sites_controller.rb:10:in `search'
+  app/controllers/sites_controller.rb:8:in `search'
+
+Rendered rescues/_trace (47.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2009-06-04 09:08:16) [GET]
+  [4;35;1mSite Load (0.8ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/application
+Rendering welcome/index
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts".site_id = 1) [0m
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts".site_id = 3) [0m
+Completed in 27ms (View: 14, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing SitesController#search (for 127.0.0.1 at 2009-06-04 09:08:17) [GET]
+  Parameters: {"url"=>"http://localhost:3000/"}
+  [4;36;1mSite Load (0.2ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."url" = 'http://localhost:3000') LIMIT 1[0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.accounts):
+  app/controllers/sites_controller.rb:10:in `search'
+  app/controllers/sites_controller.rb:8:in `search'
+
+Rendered rescues/_trace (50.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2009-06-04 09:08:24) [GET]
+  [4;35;1mSite Load (0.7ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/application
+Rendering welcome/index
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts".site_id = 1) [0m
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts".site_id = 3) [0m
+Completed in 27ms (View: 14, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing SitesController#search (for 127.0.0.1 at 2009-06-04 09:08:25) [GET]
+  Parameters: {"url"=>"http://localhost:3000/"}
+  [4;36;1mSite Load (0.2ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."url" = 'http://localhost:3000') LIMIT 1[0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.accounts):
+  app/controllers/sites_controller.rb:10:in `search'
+  app/controllers/sites_controller.rb:8:in `search'
+
+Rendered rescues/_trace (121.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2009-06-04 09:11:36) [GET]
+  [4;35;1mSite Load (0.6ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/application
+Rendering welcome/index
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts".site_id = 1) [0m
+  [4;35;1mAccount Load (0.1ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts".site_id = 3) [0m
+Completed in 22ms (View: 11, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing SitesController#search (for 127.0.0.1 at 2009-06-04 09:11:36) [GET]
+  Parameters: {"url"=>"http://localhost:3000/"}
+  [4;36;1mSite Load (0.2ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."url" = 'http://localhost:3000') LIMIT 1[0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.accounts):
+  app/controllers/sites_controller.rb:10:in `search'
+  app/controllers/sites_controller.rb:8:in `search'
+
+Rendered rescues/_trace (52.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing AccountsController#create (for 127.0.0.1 at 2009-06-04 09:11:53) [POST]
+  Parameters: {"commit"=>"Save changes", "account"=>{"author"=>"maverick", "password"=>"test123", "login"=>"test"}, "authenticity_token"=>"T8swbudiLKjZ2l4YG793clBcjzrJXmlSdO6wFwFe/qw=", "site"=>{"id"=>"1"}}
+Redirected to http://localhost:3000/
+Completed in 2ms (DB: 0) | 302 Found [http://localhost/accounts]
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2009-06-04 09:11:53) [GET]
+  [4;35;1mSite Load (0.6ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/application
+Rendering welcome/index
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts".site_id = 1) [0m
+  [4;35;1mAccount Load (0.1ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts".site_id = 3) [0m
+Completed in 17ms (View: 7, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing SitesController#search (for 127.0.0.1 at 2009-06-04 09:11:53) [GET]
+  Parameters: {"url"=>"http://localhost:3000/"}
+  [4;36;1mSite Load (0.2ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."url" = 'http://localhost:3000') LIMIT 1[0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.accounts):
+  app/controllers/sites_controller.rb:10:in `search'
+  app/controllers/sites_controller.rb:8:in `search'
+
+Rendered rescues/_trace (122.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2009-06-04 09:13:15) [GET]
+  [4;35;1mSite Load (0.6ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/application
+Rendering welcome/index
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts".site_id = 1) [0m
+  [4;35;1mAccount Load (0.1ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts".site_id = 3) [0m
+Completed in 17ms (View: 7, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing SitesController#search (for 127.0.0.1 at 2009-06-04 09:13:15) [GET]
+  Parameters: {"url"=>"http://localhost:3000/"}
+  [4;36;1mSite Load (0.1ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."url" = 'http://localhost:3000') LIMIT 1[0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.accounts):
+  app/controllers/sites_controller.rb:10:in `search'
+  app/controllers/sites_controller.rb:8:in `search'
+
+Rendered rescues/_trace (51.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing AccountsController#create (for 127.0.0.1 at 2009-06-04 09:13:23) [POST]
+  Parameters: {"commit"=>"Save changes", "account"=>{"author"=>"mav", "password"=>"bar", "login"=>"foo"}, "authenticity_token"=>"T8swbudiLKjZ2l4YG793clBcjzrJXmlSdO6wFwFe/qw=", "site"=>{"id"=>"1"}}
+
+ArgumentError (Unknown key(s): id):
+  app/controllers/accounts_controller.rb:5:in `create'
+  app/controllers/accounts_controller.rb:4:in `create'
+
+Rendered rescues/_trace (49.4ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SitesController#search (for 127.0.0.1 at 2009-06-04 09:13:24) [GET]
+  Parameters: {"url"=>"http://localhost:3000/accounts"}
+  [4;35;1mSite Load (0.2ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."url" = 'http://localhost:3000') LIMIT 1[0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.accounts):
+  app/controllers/sites_controller.rb:10:in `search'
+  app/controllers/sites_controller.rb:8:in `search'
+
+Rendered rescues/_trace (43.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing AccountsController#create (for 127.0.0.1 at 2009-06-04 09:13:54) [POST]
+  Parameters: {"commit"=>"Save changes", "account"=>{"author"=>"mav", "password"=>"bar", "login"=>"foo"}, "authenticity_token"=>"T8swbudiLKjZ2l4YG793clBcjzrJXmlSdO6wFwFe/qw=", "site"=>{"id"=>"1"}}
+Redirected to http://localhost:3000/
+Completed in 2ms (DB: 0) | 302 Found [http://localhost/accounts]
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2009-06-04 09:13:54) [GET]
+  [4;36;1mSite Load (0.7ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/application
+Rendering welcome/index
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts".site_id = 1) [0m
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts".site_id = 3) [0m
+Completed in 18ms (View: 8, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing SitesController#search (for 127.0.0.1 at 2009-06-04 09:13:54) [GET]
+  Parameters: {"url"=>"http://localhost:3000/"}
+  [4;35;1mSite Load (0.2ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."url" = 'http://localhost:3000') LIMIT 1[0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.accounts):
+  app/controllers/sites_controller.rb:10:in `search'
+  app/controllers/sites_controller.rb:8:in `search'
+
+Rendered rescues/_trace (47.0ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing AccountsController#create (for 127.0.0.1 at 2009-06-04 09:14:10) [POST]
+  Parameters: {"commit"=>"Save changes", "account"=>{"author"=>"mav", "password"=>"bar", "login"=>"foo"}, "authenticity_token"=>"T8swbudiLKjZ2l4YG793clBcjzrJXmlSdO6wFwFe/qw=", "site"=>{"id"=>"1"}}
+  [4;36;1mSite Load (0.3ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 1) [0m
+  [4;35;1mAccount Create (0.6ms)[0m   [0mINSERT INTO "accounts" ("site_id", "updated_at", "down", "author", "up", "login", "password", "created_at") VALUES(1, '2009-06-04 08:14:10', NULL, 'mav', NULL, 'foo', 'bar', '2009-06-04 08:14:10')[0m
+Redirected to http://localhost:3000/
+Completed in 205ms (DB: 1) | 302 Found [http://localhost/accounts]
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2009-06-04 09:14:10) [GET]
+  [4;36;1mSite Load (0.7ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/application
+Rendering welcome/index
+  [4;35;1mAccount Load (0.5ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts".site_id = 1) [0m
+  [4;36;1mAccount Load (0.3ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts".site_id = 3) [0m
+Completed in 21ms (View: 10, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing SitesController#search (for 127.0.0.1 at 2009-06-04 09:14:11) [GET]
+  Parameters: {"url"=>"http://localhost:3000/"}
+  [4;35;1mSite Load (0.1ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."url" = 'http://localhost:3000') LIMIT 1[0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.accounts):
+  app/controllers/sites_controller.rb:10:in `search'
+  app/controllers/sites_controller.rb:8:in `search'
+
+Rendered rescues/_trace (49.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2009-06-04 09:14:21) [GET]
+  [4;36;1mSite Load (0.6ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/application
+Rendering welcome/index
+  [4;35;1mAccount Load (0.4ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts".site_id = 1) [0m
+  [4;36;1mAccount Load (0.1ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts".site_id = 3) [0m
+Completed in 18ms (View: 7, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing SitesController#search (for 127.0.0.1 at 2009-06-04 09:14:21) [GET]
+  Parameters: {"url"=>"http://localhost:3000/"}
+  [4;35;1mSite Load (0.1ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."url" = 'http://localhost:3000') LIMIT 1[0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.accounts):
+  app/controllers/sites_controller.rb:10:in `search'
+  app/controllers/sites_controller.rb:8:in `search'
+
+Rendered rescues/_trace (47.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing AccountsController#create (for 127.0.0.1 at 2009-06-04 09:14:29) [POST]
+  Parameters: {"commit"=>"Save changes", "account"=>{"author"=>"maverick", "password"=>"test", "login"=>"blah"}, "authenticity_token"=>"T8swbudiLKjZ2l4YG793clBcjzrJXmlSdO6wFwFe/qw=", "site"=>{"id"=>"3"}}
+  [4;36;1mSite Load (0.3ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 3) [0m
+  [4;35;1mAccount Create (0.4ms)[0m   [0mINSERT INTO "accounts" ("site_id", "updated_at", "down", "author", "up", "login", "password", "created_at") VALUES(3, '2009-06-04 08:14:29', NULL, 'maverick', NULL, 'blah', 'test', '2009-06-04 08:14:29')[0m
+Redirected to http://localhost:3000/
+Completed in 16ms (DB: 1) | 302 Found [http://localhost/accounts]
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2009-06-04 09:14:29) [GET]
+  [4;36;1mSite Load (0.7ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/application
+Rendering welcome/index
+  [4;35;1mAccount Load (0.3ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts".site_id = 1) [0m
+  [4;36;1mAccount Load (0.4ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts".site_id = 3) [0m
+Completed in 19ms (View: 8, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing SitesController#search (for 127.0.0.1 at 2009-06-04 09:14:29) [GET]
+  Parameters: {"url"=>"http://localhost:3000/"}
+  [4;35;1mSite Load (0.2ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."url" = 'http://localhost:3000') LIMIT 1[0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.accounts):
+  app/controllers/sites_controller.rb:10:in `search'
+  app/controllers/sites_controller.rb:8:in `search'
+
+Rendered rescues/_trace (48.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2009-06-04 09:17:20) [GET]
+  [4;36;1mSite Load (0.7ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/application
+Rendering welcome/index
+  [4;35;1mAccount Load (0.5ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts".site_id = 1) [0m
+  [4;36;1mAccount Load (0.4ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts".site_id = 3) [0m
+Completed in 26ms (View: 13, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing SitesController#search (for 127.0.0.1 at 2009-06-04 09:17:20) [GET]
+  Parameters: {"url"=>"http://localhost:3000/"}
+  [4;35;1mSite Load (0.2ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."url" = 'http://localhost:3000') LIMIT 1[0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.accounts):
+  app/controllers/sites_controller.rb:10:in `search'
+  app/controllers/sites_controller.rb:8:in `search'
+
+Rendered rescues/_trace (131.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2009-06-04 09:19:46) [GET]
+  [4;36;1mSite Load (0.8ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/application
+Rendering welcome/index
+  [4;35;1mAccount Load (0.5ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts".site_id = 1) [0m
+  [4;36;1mAccount Load (0.4ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts".site_id = 3) [0m
+Completed in 31ms (View: 19, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing SitesController#search (for 127.0.0.1 at 2009-06-04 09:19:46) [GET]
+  Parameters: {"url"=>"http://localhost:3000/"}
+  [4;35;1mSite Load (0.2ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."url" = 'http://localhost:3000') LIMIT 1[0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.accounts):
+  app/controllers/sites_controller.rb:10:in `search'
+  app/controllers/sites_controller.rb:8:in `search'
+
+Rendered rescues/_trace (51.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2009-06-04 09:20:19) [GET]
+  [4;36;1mSite Load (0.6ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/application
+Rendering welcome/index
+  [4;35;1mAccount Load (0.4ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts".site_id = 1) [0m
+  [4;36;1mAccount Load (0.4ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts".site_id = 3) [0m
+Completed in 23ms (View: 12, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing SitesController#search (for 127.0.0.1 at 2009-06-04 09:20:19) [GET]
+  Parameters: {"url"=>"http://localhost:3000/"}
+  [4;35;1mSite Load (0.2ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."url" = 'http://localhost:3000') LIMIT 1[0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.accounts):
+  app/controllers/sites_controller.rb:10:in `search'
+  app/controllers/sites_controller.rb:8:in `search'
+
+Rendered rescues/_trace (128.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2009-06-04 09:20:47) [GET]
+  [4;36;1mSite Load (0.7ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/application
+Rendering welcome/index
+  [4;35;1mAccount Load (0.4ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts".site_id = 1) [0m
+  [4;36;1mAccount Load (0.3ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts".site_id = 3) [0m
+Completed in 24ms (View: 12, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing SitesController#search (for 127.0.0.1 at 2009-06-04 09:20:47) [GET]
+  Parameters: {"url"=>"http://localhost:3000/"}
+  [4;35;1mSite Load (0.2ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."url" = 'http://localhost:3000') LIMIT 1[0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.accounts):
+  app/controllers/sites_controller.rb:10:in `search'
+  app/controllers/sites_controller.rb:8:in `search'
+
+Rendered rescues/_trace (52.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2009-06-04 09:20:53) [GET]
+  [4;36;1mSite Load (0.8ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/application
+Rendering welcome/index
+  [4;35;1mAccount Load (0.4ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts".site_id = 1) [0m
+  [4;36;1mAccount Load (0.4ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts".site_id = 3) [0m
+Completed in 26ms (View: 13, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing SitesController#search (for 127.0.0.1 at 2009-06-04 09:20:54) [GET]
+  Parameters: {"url"=>"http://localhost:3000/"}
+  [4;35;1mSite Load (0.2ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."url" = 'http://localhost:3000') LIMIT 1[0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.accounts):
+  app/controllers/sites_controller.rb:10:in `search'
+  app/controllers/sites_controller.rb:8:in `search'
+
+Rendered rescues/_trace (124.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2009-06-04 09:21:07) [GET]
+  [4;36;1mSite Load (0.6ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/application
+Rendering welcome/index
+  [4;35;1mAccount Load (0.4ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts".site_id = 1) [0m
+  [4;36;1mAccount Load (0.3ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts".site_id = 3) [0m
+Completed in 23ms (View: 12, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing SitesController#search (for 127.0.0.1 at 2009-06-04 09:21:07) [GET]
+  Parameters: {"url"=>"http://localhost:3000/"}
+  [4;35;1mSite Load (0.2ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."url" = 'http://localhost:3000') LIMIT 1[0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.accounts):
+  app/controllers/sites_controller.rb:10:in `search'
+  app/controllers/sites_controller.rb:8:in `search'
+
+Rendered rescues/_trace (48.7ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2009-06-04 09:21:48) [GET]
+  [4;36;1mSite Load (0.8ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/application
+Rendering welcome/index
+  [4;35;1mAccount Load (0.4ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts".site_id = 1) [0m
+  [4;36;1mAccount Load (0.3ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts".site_id = 3) [0m
+Completed in 22ms (View: 11, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing SitesController#search (for 127.0.0.1 at 2009-06-04 09:21:48) [GET]
+  Parameters: {"url"=>"http://localhost:3000/"}
+  [4;35;1mSite Load (0.2ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."url" = 'http://localhost:3000') LIMIT 1[0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.accounts):
+  app/controllers/sites_controller.rb:10:in `search'
+  app/controllers/sites_controller.rb:8:in `search'
+
+Rendered rescues/_trace (43.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2009-06-04 09:21:50) [GET]
+  [4;36;1mSite Load (0.8ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/application
+Rendering welcome/index
+  [4;35;1mAccount Load (0.3ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts".site_id = 1) [0m
+  [4;36;1mAccount Load (0.3ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts".site_id = 3) [0m
+Completed in 19ms (View: 7, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing SitesController#search (for 127.0.0.1 at 2009-06-04 09:21:50) [GET]
+  Parameters: {"url"=>"http://localhost:3000/"}
+  [4;35;1mSite Load (0.2ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."url" = 'http://localhost:3000') LIMIT 1[0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.accounts):
+  app/controllers/sites_controller.rb:10:in `search'
+  app/controllers/sites_controller.rb:8:in `search'
+
+Rendered rescues/_trace (48.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2009-06-04 09:22:00) [GET]
+  [4;36;1mSite Load (0.9ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/application
+Rendering welcome/index
+  [4;35;1mAccount Load (0.4ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts".site_id = 1) [0m
+  [4;36;1mAccount Load (0.4ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts".site_id = 3) [0m
+Completed in 27ms (View: 13, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing SitesController#search (for 127.0.0.1 at 2009-06-04 09:22:00) [GET]
+  Parameters: {"url"=>"http://localhost:3000/"}
+  [4;35;1mSite Load (0.1ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."url" = 'http://localhost:3000') LIMIT 1[0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.accounts):
+  app/controllers/sites_controller.rb:10:in `search'
+  app/controllers/sites_controller.rb:8:in `search'
+
+Rendered rescues/_trace (44.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2009-06-04 09:22:08) [GET]
+  [4;36;1mSite Load (0.6ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/application
+Rendering welcome/index
+  [4;35;1mAccount Load (0.4ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts".site_id = 1) [0m
+  [4;36;1mAccount Load (0.3ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts".site_id = 3) [0m
+Completed in 24ms (View: 13, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing SitesController#search (for 127.0.0.1 at 2009-06-04 09:22:08) [GET]
+  Parameters: {"url"=>"http://localhost:3000/"}
+  [4;35;1mSite Load (0.2ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."url" = 'http://localhost:3000') LIMIT 1[0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.accounts):
+  app/controllers/sites_controller.rb:10:in `search'
+  app/controllers/sites_controller.rb:8:in `search'
+
+Rendered rescues/_trace (45.7ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2009-06-04 09:22:47) [GET]
+  [4;36;1mSite Load (0.8ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/application
+Rendering welcome/index
+  [4;35;1mAccount Load (0.4ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts".site_id = 1) [0m
+  [4;36;1mAccount Load (0.3ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts".site_id = 3) [0m
+Completed in 111ms (View: 97, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing SitesController#search (for 127.0.0.1 at 2009-06-04 09:22:47) [GET]
+  Parameters: {"url"=>"http://localhost:3000/"}
+  [4;35;1mSite Load (0.2ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."url" = 'http://localhost:3000') LIMIT 1[0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.accounts):
+  app/controllers/sites_controller.rb:10:in `search'
+  app/controllers/sites_controller.rb:8:in `search'
+
+Rendered rescues/_trace (45.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2009-06-04 09:22:55) [GET]
+  [4;36;1mSite Load (0.7ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/application
+Rendering welcome/index
+  [4;35;1mAccount Load (0.4ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts".site_id = 1) [0m
+  [4;36;1mAccount Load (0.3ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts".site_id = 3) [0m
+Completed in 22ms (View: 11, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing SitesController#search (for 127.0.0.1 at 2009-06-04 09:22:55) [GET]
+  Parameters: {"url"=>"http://localhost:3000/"}
+  [4;35;1mSite Load (0.2ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."url" = 'http://localhost:3000') LIMIT 1[0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.accounts):
+  app/controllers/sites_controller.rb:10:in `search'
+  app/controllers/sites_controller.rb:8:in `search'
+
+Rendered rescues/_trace (51.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2009-06-04 09:23:04) [GET]
+  [4;36;1mSite Load (0.6ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/application
+Rendering welcome/index
+  [4;35;1mAccount Load (0.4ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts".site_id = 1) [0m
+  [4;36;1mAccount Load (0.4ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts".site_id = 3) [0m
+Completed in 24ms (View: 12, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing SitesController#search (for 127.0.0.1 at 2009-06-04 09:23:05) [GET]
+  Parameters: {"url"=>"http://localhost:3000/"}
+  [4;35;1mSite Load (0.2ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."url" = 'http://localhost:3000') LIMIT 1[0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.accounts):
+  app/controllers/sites_controller.rb:10:in `search'
+  app/controllers/sites_controller.rb:8:in `search'
+
+Rendered rescues/_trace (51.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2009-06-04 09:23:15) [GET]
+  [4;36;1mSite Load (0.7ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/application
+Rendering welcome/index
+  [4;35;1mAccount Load (0.4ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts".site_id = 1) [0m
+  [4;36;1mAccount Load (0.4ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts".site_id = 3) [0m
+Completed in 24ms (View: 13, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing SitesController#search (for 127.0.0.1 at 2009-06-04 09:23:15) [GET]
+  Parameters: {"url"=>"http://localhost:3000/"}
+  [4;35;1mSite Load (0.1ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."url" = 'http://localhost:3000') LIMIT 1[0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.accounts):
+  app/controllers/sites_controller.rb:10:in `search'
+  app/controllers/sites_controller.rb:8:in `search'
+
+Rendered rescues/_trace (127.5ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2009-06-04 09:23:35) [GET]
+  [4;36;1mSite Load (0.6ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/application
+Rendering welcome/index
+  [4;35;1mAccount Load (0.3ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts".site_id = 1) [0m
+  [4;36;1mAccount Load (0.3ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts".site_id = 3) [0m
+Completed in 19ms (View: 7, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing SitesController#search (for 127.0.0.1 at 2009-06-04 09:23:35) [GET]
+  Parameters: {"url"=>"http://localhost:3000/"}
+  [4;35;1mSite Load (0.2ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."url" = 'http://localhost:3000') LIMIT 1[0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.accounts):
+  app/controllers/sites_controller.rb:10:in `search'
+  app/controllers/sites_controller.rb:8:in `search'
+
+Rendered rescues/_trace (50.1ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2009-06-04 09:34:41) [GET]
+  [4;36;1mSite Load (0.8ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/application
+Rendering welcome/index
+  [4;35;1mAccount Load (0.4ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts".site_id = 1) [0m
+  [4;36;1mAccount Load (0.4ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts".site_id = 3) [0m
+Completed in 25ms (View: 13, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing SitesController#search (for 127.0.0.1 at 2009-06-04 09:34:41) [GET]
+  Parameters: {"url"=>"http://vkontakte.ru/login.php?m=1"}
+  [4;35;1mSite Load (0.2ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."url" = 'http://vkontakte.ru') LIMIT 1[0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.accounts):
+  app/controllers/sites_controller.rb:10:in `search'
+  app/controllers/sites_controller.rb:8:in `search'
+
+Rendered rescues/_trace (135.0ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SitesController#search (for 127.0.0.1 at 2009-06-04 09:34:42) [GET]
+  Parameters: {"url"=>"http://vkontakte.ru/login.php?m=1"}
+  [4;36;1mSite Load (0.2ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."url" = 'http://vkontakte.ru') LIMIT 1[0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.accounts):
+  app/controllers/sites_controller.rb:10:in `search'
+  app/controllers/sites_controller.rb:8:in `search'
+
+Rendered rescues/_trace (44.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SitesController#search (for 127.0.0.1 at 2009-06-04 09:34:49) [GET]
+  Parameters: {"url"=>"about:blank"}
+
+ActionView::MissingTemplate (Missing template sites/search.erb in view path app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SitesController#search (for 127.0.0.1 at 2009-06-04 09:34:49) [GET]
+  Parameters: {"url"=>"about:blank"}
+
+ActionView::MissingTemplate (Missing template sites/search.erb in view path app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SitesController#search (for 127.0.0.1 at 2009-06-04 09:35:00) [GET]
+  Parameters: {"url"=>"http://vkontakte.ru/login.php?m=1"}
+  [4;35;1mSite Load (0.1ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."url" = 'http://vkontakte.ru') LIMIT 1[0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.accounts):
+  app/controllers/sites_controller.rb:10:in `search'
+  app/controllers/sites_controller.rb:8:in `search'
+
+Rendered rescues/_trace (116.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SitesController#search (for 127.0.0.1 at 2009-06-04 09:36:20) [GET]
+  Parameters: {"url"=>"about:blank"}
+
+ActionView::MissingTemplate (Missing template sites/search.erb in view path app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SitesController#search (for 127.0.0.1 at 2009-06-04 09:36:20) [GET]
+  Parameters: {"url"=>"about:blank"}
+
+ActionView::MissingTemplate (Missing template sites/search.erb in view path app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SitesController#search (for 127.0.0.1 at 2009-06-04 09:36:54) [GET]
+  Parameters: {"url"=>"http://vkontakte.ru/login.php?m=1"}
+  [4;36;1mSite Load (0.2ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."url" = 'http://vkontakte.ru') LIMIT 1[0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.accounts):
+  app/controllers/sites_controller.rb:10:in `search'
+  app/controllers/sites_controller.rb:8:in `search'
+
+Rendered rescues/_trace (45.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SitesController#search (for 127.0.0.1 at 2009-06-04 09:37:28) [GET]
+  Parameters: {"url"=>"http://localhost:3000/"}
+  [4;35;1mSite Load (0.1ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."url" = 'http://localhost:3000') LIMIT 1[0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.accounts):
+  app/controllers/sites_controller.rb:10:in `search'
+  app/controllers/sites_controller.rb:8:in `search'
+
+Rendered rescues/_trace (43.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SitesController#search (for 127.0.0.1 at 2009-06-04 09:37:54) [GET]
+  Parameters: {"url"=>"about:blank"}
+
+ActionView::MissingTemplate (Missing template sites/search.erb in view path app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2009-06-04 09:48:49) [GET]
+  [4;36;1mSite Load (0.8ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/application
+Rendering welcome/index
+  [4;35;1mAccount Load (0.4ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts".site_id = 1) [0m
+  [4;36;1mAccount Load (0.3ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts".site_id = 3) [0m
+Completed in 25ms (View: 12, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2009-06-04 09:49:02) [GET]
+  [4;35;1mSite Load (0.7ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/application
+Rendering welcome/index
+
+ActionView::TemplateError (undefined local variable or method `sites' for #<ActionView::Base:0x2590ef0>) on line #1 of app/views/welcome/index.rhtml:
+1: <h3><% sites.count %> sites</h3>
+2: <% @sites.each do |site| %>
+3:   <h4><%= link_to site.name, site.url %></h4>
+4:   <ul>
+
+    app/views/welcome/index.rhtml:1:in `_run_rhtml_app47views47welcome47index46rhtml'
+
+Rendered rescues/_trace (47.7ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2009-06-04 09:49:17) [GET]
+  [4;36;1mSite Load (0.7ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/application
+Rendering welcome/index
+
+ActionView::TemplateError (undefined method `count' for #<Array:0x241e4c8>) on line #1 of app/views/welcome/index.rhtml:
+1: <h3><%= @sites.count %> sites with passwords</h3>
+2: <% @sites.each do |site| %>
+3:   <h4><%= link_to site.name, site.url %></h4>
+4:   <ul>
+
+    app/views/welcome/index.rhtml:1:in `_run_rhtml_app47views47welcome47index46rhtml'
+
+Rendered rescues/_trace (119.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2009-06-04 09:49:24) [GET]
+  [4;35;1mSite Load (0.6ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering template within layouts/application
+Rendering welcome/index
+  [4;36;1mAccount Load (0.4ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts".site_id = 1) [0m
+  [4;35;1mAccount Load (0.3ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts".site_id = 3) [0m
+Completed in 23ms (View: 12, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing SitesController#search (for 127.0.0.1 at 2009-06-04 13:13:05) [GET]
+  Parameters: {"url"=>"http://vkontakte.ru/"}
+  [4;36;1mSite Load (0.2ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."url" = 'http://vkontakte.ru') LIMIT 1[0m
+Completed in 8ms (View: 1, DB: 0) | 200 OK [http://localhost/sites/search?url=http%3A%2F%2Fvkontakte.ru%2F]
+  [4;36;1mSite Load (0.7ms)[0m   [0;1mSELECT * FROM "sites" [0m
+  [4;35;1mSite Load (0.5ms)[0m   [0mSELECT * FROM "sites" [0m
+  [4;36;1mSite Update (0.6ms)[0m   [0;1mUPDATE "sites" SET "url" = 'http://vkontakte.ru', "updated_at" = '2009-06-04 12:14:22' WHERE "id" = 1[0m
+
+
+Processing SitesController#search (for 127.0.0.1 at 2009-06-04 13:17:11) [GET]
+  Parameters: {"url"=>"http://vkontakte.ru/"}
+  [4;35;1mSite Load (0.3ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."url" = 'http://vkontakte.ru') LIMIT 1[0m
+  [4;36;1mAccount Load (0.4ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts".site_id = 1) [0m
+Completed in 18ms (View: 1, DB: 1) | 200 OK [http://localhost/sites/search?url=http%3A%2F%2Fvkontakte.ru%2F]
+
+
+Processing SitesController#search (for 127.0.0.1 at 2009-06-04 13:17:29) [GET]
+  Parameters: {"url"=>"http://vkontakte.ru/"}
+  [4;35;1mSite Load (0.3ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."url" = 'http://vkontakte.ru') LIMIT 1[0m
+  [4;36;1mAccount Load (0.5ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts".site_id = 1) [0m
+Completed in 16ms (View: 1, DB: 1) | 200 OK [http://localhost/sites/search?url=http%3A%2F%2Fvkontakte.ru%2F]
+
+
+Processing SitesController#search (for 127.0.0.1 at 2009-06-04 13:21:43) [GET]
+  Parameters: {"url"=>"http://vkontakte.ru/"}
+  [4;35;1mSite Load (0.3ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."url" = 'http://vkontakte.ru') LIMIT 1[0m
+  [4;36;1mAccount Load (0.4ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts".site_id = 1) [0m
+Completed in 16ms (View: 1, DB: 1) | 200 OK [http://localhost/sites/search?url=http%3A%2F%2Fvkontakte.ru%2F]
+
+
+Processing SitesController#search (for 127.0.0.1 at 2009-06-04 13:22:08) [GET]
+  Parameters: {"url"=>"http://vkontakte.ru/"}
+  [4;35;1mSite Load (0.3ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."url" = 'http://vkontakte.ru') LIMIT 1[0m
+  [4;36;1mAccount Load (0.4ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts".site_id = 1) [0m
+Completed in 15ms (View: 1, DB: 1) | 200 OK [http://localhost/sites/search?url=http%3A%2F%2Fvkontakte.ru%2F]
+
+
+Processing SitesController#search (for 127.0.0.1 at 2009-06-04 13:22:14) [GET]
+  Parameters: {"url"=>"about:blank"}
+
+ActionView::MissingTemplate (Missing template sites/search.erb in view path app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SitesController#search (for 127.0.0.1 at 2009-06-04 13:22:14) [GET]
+  Parameters: {"url"=>"http://www.letmeinpls.com/"}
+  [4;35;1mSite Load (0.2ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."url" = 'http://letmeinpls.com') LIMIT 1[0m
+Completed in 8ms (View: 1, DB: 0) | 200 OK [http://localhost/sites/search?url=http%3A%2F%2Fwww.letmeinpls.com%2F]
+
+
+Processing SitesController#search (for 127.0.0.1 at 2009-06-04 13:22:20) [GET]
+  Parameters: {"url"=>"about:blank"}
+
+ActionView::MissingTemplate (Missing template sites/search.erb in view path app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing AccountsController#show (for 127.0.0.1 at 2009-06-04 13:22:30) [GET]
+  Parameters: {"accountId"=>"1", "id"=>"feedback", "feedback"=>"1"}
+
+ActionController::UnknownAction (No action responded to show. Actions: create):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing AccountsController#show (for 127.0.0.1 at 2009-06-04 13:22:51) [GET]
+  Parameters: {"accountId"=>"1", "id"=>"feedback", "feedback"=>"1"}
+
+ActionController::UnknownAction (No action responded to show. Actions: create):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing SitesController#search (for 127.0.0.1 at 2009-06-04 13:23:34) [GET]
+  Parameters: {"url"=>"about:blank"}
+
+ActionView::MissingTemplate (Missing template sites/search.erb in view path app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SitesController#search (for 127.0.0.1 at 2009-06-04 13:23:34) [GET]
+  Parameters: {"url"=>"about:blank"}
+
+ActionView::MissingTemplate (Missing template sites/search.erb in view path app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SitesController#search (for 127.0.0.1 at 2009-06-04 13:23:49) [GET]
+  Parameters: {"url"=>"about:blank"}
+
+ActionView::MissingTemplate (Missing template sites/search.erb in view path app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SitesController#search (for 127.0.0.1 at 2009-06-04 13:23:49) [GET]
+  Parameters: {"url"=>"about:blank"}
+
+ActionView::MissingTemplate (Missing template sites/search.erb in view path app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SitesController#search (for 127.0.0.1 at 2009-06-04 13:24:10) [GET]
+  Parameters: {"url"=>"about:blank"}
+Completed in 5ms (View: 1, DB: 0) | 200 OK [http://localhost/sites/search?url=about%3Ablank]
+
+
+Processing SitesController#search (for 127.0.0.1 at 2009-06-04 13:24:10) [GET]
+  Parameters: {"url"=>"about:blank"}
+Completed in 5ms (View: 1, DB: 0) | 200 OK [http://localhost/sites/search?url=about%3Ablank]
+
+
+Processing SitesController#search (for 127.0.0.1 at 2009-06-04 13:24:37) [GET]
+  Parameters: {"url"=>"about:blank"}
+Completed in 9ms (View: 4, DB: 0) | 200 OK [http://localhost/sites/search?url=about%3Ablank]
+
+
+Processing SitesController#search (for 127.0.0.1 at 2009-06-04 13:24:38) [GET]
+  Parameters: {"url"=>"about:blank"}
+Completed in 5ms (View: 1, DB: 0) | 200 OK [http://localhost/sites/search?url=about%3Ablank]
+
+
+Processing SitesController#search (for 127.0.0.1 at 2009-06-04 13:24:38) [GET]
+  Parameters: {"url"=>"about:blank"}
+Completed in 5ms (View: 1, DB: 0) | 200 OK [http://localhost/sites/search?url=about%3Ablank]
+
+
+Processing AccountsController#show (for 127.0.0.1 at 2009-06-04 13:25:08) [GET]
+  Parameters: {"accountId"=>"1", "id"=>"feedback", "feedback"=>"1"}
+
+ActionController::UnknownAction (No action responded to show. Actions: create):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing AccountsController#feedback (for 127.0.0.1 at 2009-06-04 13:25:52) [GET]
+  Parameters: {"accountId"=>"1", "feedback"=>"1"}
+
+ActionController::UnknownAction (No action responded to feedback. Actions: create):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing AccountsController#feedback (for 127.0.0.1 at 2009-06-04 13:26:19) [GET]
+  Parameters: {"accountId"=>"1", "feedback"=>"1"}
+
+ActionView::MissingTemplate (Missing template accounts/.erb in view path app/views):
+  app/controllers/accounts_controller.rb:14:in `feedback'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing AccountsController#feedback (for 127.0.0.1 at 2009-06-04 13:26:47) [GET]
+  Parameters: {"accountId"=>"1", "feedback"=>"1"}
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://localhost/accounts/feedback?accountId=1&feedback=1]
+
+
+Processing SitesController#search (for 127.0.0.1 at 2009-06-04 13:27:38) [GET]
+  Parameters: {"url"=>"about:blank"}
+Completed in 17ms (View: 3, DB: 0) | 200 OK [http://localhost/sites/search?url=about%3Ablank]
+
+
+Processing SitesController#search (for 127.0.0.1 at 2009-06-04 13:27:38) [GET]
+  Parameters: {"url"=>"about:blank"}
+Completed in 5ms (View: 1, DB: 0) | 200 OK [http://localhost/sites/search?url=about%3Ablank]
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2009-06-04 13:27:40) [GET]
+  [4;36;1mSite Load (0.8ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/application
+Rendering welcome/index
+  [4;35;1mAccount Load (0.5ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts".site_id = 1) [0m
+  [4;36;1mAccount Load (0.4ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts".site_id = 3) [0m
+Completed in 76ms (View: 62, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing SitesController#search (for 127.0.0.1 at 2009-06-04 13:27:40) [GET]
+  Parameters: {"url"=>"http://localhost:3000/"}
+  [4;35;1mSite Load (0.2ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."url" = 'http://localhost:3000') LIMIT 1[0m
+Completed in 8ms (View: 1, DB: 0) | 200 OK [http://localhost/sites/search?url=http%3A%2F%2Flocalhost%3A3000%2F]
+  [4;36;1mAccount Load (0.8ms)[0m   [0;1mSELECT * FROM "accounts" [0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to AddAuthorToAccount (20090604070114)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCREATE TEMPORARY TABLE "altered_accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "login" varchar(255), "password" varchar(255), "site_id" integer, "up" integer, "down" integer, "created_at" datetime, "updated_at" datetime, "author" varchar(255)) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("accounts")[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mDROP TABLE "accounts"[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "login" varchar(255), "password" varchar(255), "site_id" integer, "up" integer, "down" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("altered_accounts")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mDROP TABLE "altered_accounts"[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mDELETE FROM schema_migrations WHERE version = '20090604070114'[0m
+Migrating to CreateAccounts (20090603171525)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mDROP TABLE "accounts"[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mDELETE FROM schema_migrations WHERE version = '20090603171525'[0m
+Migrating to CreateSites (20090603171355)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mDROP TABLE "sites"[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mDELETE FROM schema_migrations WHERE version = '20090603171355'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateSites (20090603171355)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCREATE TABLE "sites" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "url" varchar(255), "regex" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090603171355')[0m
+Migrating to CreateAccounts (20090603171525)
+  [4;35;1mSQL (0.5ms)[0m   [0mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "login" varchar(255) NOT NULL, "password" varchar(255) NOT NULL, "site_id" integer NOT NULL, "up" integer DEFAULT 0 NOT NULL, "down" integer DEFAULT 0 NOT NULL, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090603171525')[0m
+Migrating to AddAuthorToAccount (20090604070114)
+  [4;35;1mSQL (0.4ms)[0m   [0mALTER TABLE "accounts" ADD "author" varchar(255)[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090604070114')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("accounts")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("sites")[0m
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2009-06-04 13:30:42) [GET]
+  [4;36;1mSite Load (0.5ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/application
+Rendering welcome/index
+Completed in 16ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing SitesController#create (for 127.0.0.1 at 2009-06-04 13:30:53) [POST]
+  Parameters: {"commit"=>"Save changes", "authenticity_token"=>"OyI8ynQkxYOEttrNfJwuQ1lSpMF4sHjoQVQ8CC8DZy4=", "site"=>{"url"=>"http://www.vkontakte.ru/"}}
+  [4;35;1mSite Create (0.6ms)[0m   [0mINSERT INTO "sites" ("regex", "updated_at", "url", "created_at") VALUES(NULL, '2009-06-04 12:30:53', 'http://www.vkontakte.ru/', '2009-06-04 12:30:53')[0m
+Redirected to http://localhost:3000/
+Completed in 85ms (DB: 1) | 302 Found [http://localhost/sites]
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2009-06-04 13:30:53) [GET]
+  [4;36;1mSite Load (0.7ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/application
+Rendering welcome/index
+  [4;35;1mAccount Load (0.2ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts".site_id = 1) [0m
+Completed in 19ms (View: 7, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing AccountsController#create (for 127.0.0.1 at 2009-06-04 13:31:00) [POST]
+  Parameters: {"commit"=>"Save changes", "account"=>{"author"=>"maverick", "password"=>"bar", "login"=>"foo"}, "authenticity_token"=>"OyI8ynQkxYOEttrNfJwuQ1lSpMF4sHjoQVQ8CC8DZy4=", "site"=>{"id"=>"1"}}
+  [4;36;1mSite Load (0.3ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 1) [0m
+  [4;35;1mAccount Create (0.4ms)[0m   [0mINSERT INTO "accounts" ("site_id", "updated_at", "down", "author", "up", "login", "password", "created_at") VALUES(1, '2009-06-04 12:31:00', 0, 'maverick', 0, 'foo', 'bar', '2009-06-04 12:31:00')[0m
+Redirected to http://localhost:3000/
+Completed in 22ms (DB: 1) | 302 Found [http://localhost/accounts]
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2009-06-04 13:31:00) [GET]
+  [4;36;1mSite Load (0.8ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/application
+Rendering welcome/index
+  [4;35;1mAccount Load (0.4ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts".site_id = 1) [0m
+Completed in 19ms (View: 7, DB: 1) | 200 OK [http://localhost/]
+  [4;36;1mAccount Load (0.4ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 1) [0m
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2009-06-04 13:32:16) [GET]
+  [4;36;1mSite Load (0.6ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/application
+Rendering welcome/index
+  [4;35;1mAccount Load (0.4ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts".site_id = 1) [0m
+Completed in 21ms (View: 11, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2009-06-04 13:32:24) [GET]
+  [4;36;1mSite Load (0.6ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/application
+Rendering welcome/index
+  [4;35;1mAccount Load (0.5ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts".site_id = 1) [0m
+Completed in 26ms (View: 14, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2009-06-04 13:32:32) [GET]
+  [4;36;1mSite Load (0.8ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/application
+Rendering welcome/index
+  [4;35;1mAccount Load (0.4ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts".site_id = 1) [0m
+Completed in 25ms (View: 12, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2009-06-04 13:34:26) [GET]
+  [4;36;1mSite Load (0.6ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/application
+Rendering welcome/index
+  [4;35;1mAccount Load (0.4ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts".site_id = 1) [0m
+Completed in 26ms (View: 15, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2009-06-04 13:35:05) [GET]
+  [4;36;1mSite Load (0.6ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/application
+Rendering welcome/index
+  [4;35;1mAccount Load (0.4ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts".site_id = 1) [0m
+Completed in 88ms (View: 78, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2009-06-04 13:35:16) [GET]
+  [4;36;1mSite Load (0.6ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/application
+Rendering welcome/index
+  [4;35;1mAccount Load (0.4ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts".site_id = 1) [0m
+Completed in 17ms (View: 6, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2009-06-04 13:36:27) [GET]
+  [4;36;1mSite Load (0.7ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/application
+Rendering welcome/index
+  [4;35;1mAccount Load (0.5ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts".site_id = 1) [0m
+Completed in 25ms (View: 13, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2009-06-04 13:36:45) [GET]
+  [4;36;1mSite Load (0.7ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/application
+Rendering welcome/index
+  [4;35;1mAccount Load (0.5ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts".site_id = 1) [0m
+Completed in 25ms (View: 13, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2009-06-04 13:39:03) [GET]
+  [4;36;1mSite Load (1.2ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/application
+Rendering welcome/index
+  [4;35;1mAccount Load (0.5ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts".site_id = 1) [0m
+Completed in 21ms (View: 8, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2009-06-04 13:39:05) [GET]
+  [4;36;1mSite Load (0.6ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/application
+Rendering welcome/index
+  [4;35;1mAccount Load (0.4ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts".site_id = 1) [0m
+Completed in 20ms (View: 9, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2009-06-04 13:39:24) [GET]
+  [4;36;1mSite Load (0.6ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/application
+Rendering welcome/index
+  [4;35;1mAccount Load (0.4ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts".site_id = 1) [0m
+Completed in 21ms (View: 10, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2009-06-04 13:39:44) [GET]
+  [4;36;1mSite Load (0.6ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering template within layouts/application
+Rendering welcome/index
+  [4;35;1mAccount Load (0.4ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts".site_id = 1) [0m
+Completed in 22ms (View: 10, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing AccountsController#feedback (for 127.0.0.1 at 2009-06-04 13:44:00) [GET]
+  Parameters: {"accountId"=>"1", "feedback"=>"-1"}
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://localhost/accounts/feedback?accountId=1&feedback=-1]
+
+
+Processing SitesController#search (for 127.0.0.1 at 2009-06-04 14:51:34) [GET]
+  Parameters: {"url"=>"http://www.thenerds.net/Product.UNV83605.html"}
+  [4;36;1mSite Load (0.2ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."url" = 'http://thenerds.net') LIMIT 1[0m
+Completed in 8ms (View: 1, DB: 0) | 200 OK [http://localhost/sites/search?url=http%3A%2F%2Fwww.thenerds.net%2FProduct.UNV83605.html]
+
+
+Processing SitesController#search (for 127.0.0.1 at 2009-06-04 14:51:49) [GET]
+  Parameters: {"url"=>"http://www.thenerds.net/Product.UNV83605.html"}
+  [4;35;1mSite Load (0.2ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."url" = 'http://thenerds.net') LIMIT 1[0m
+Completed in 7ms (View: 1, DB: 0) | 200 OK [http://localhost/sites/search?url=http%3A%2F%2Fwww.thenerds.net%2FProduct.UNV83605.html]
+
+
+Processing AccountsController#feedback (for 127.0.0.1 at 2009-06-04 14:53:07) [GET]
+  Parameters: {"accountId"=>"undefined", "feedback"=>"1"}
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://localhost/accounts/feedback?accountId=undefined&feedback=1]
+
+
+Processing SitesController#search (for 127.0.0.1 at 2009-06-04 14:54:22) [GET]
+  Parameters: {"url"=>"http://www.thenerds.net/Product.UNV83605.html"}
+  [4;36;1mSite Load (0.2ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."url" = 'http://thenerds.net') LIMIT 1[0m
+Completed in 11ms (View: 1, DB: 0) | 200 OK [http://localhost/sites/search?url=http%3A%2F%2Fwww.thenerds.net%2FProduct.UNV83605.html]
+
+
+Processing SitesController#search (for 127.0.0.1 at 2009-06-04 14:56:01) [GET]
+  Parameters: {"url"=>"http://www.thenerds.net/Product.UNV83605.html"}
+  [4;35;1mSite Load (0.2ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."url" = 'http://thenerds.net') LIMIT 1[0m
+Completed in 7ms (View: 1, DB: 0) | 200 OK [http://localhost/sites/search?url=http%3A%2F%2Fwww.thenerds.net%2FProduct.UNV83605.html]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-04 15:42:49) [GET]
+
+ActionController::RoutingError (No route matches "/retailers/list" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
