@@ -1,10 +1,10 @@
 #/bin/bash
 rm -f /var/www/letmeinpls/current/public/extension/letmein*.xpi
 cd /tmp
-git clone git@github.com:shadchnev/LetMeInPls.git
-version=`cat /tmp/LetMeInPls/install.rdf | grep em:version | sed -n 's/ *<[^>]*>//pg'`
+git clone git@github.com:shadchnev/LetMeInPls-Firefox.git
+version=`cat /tmp/LetMeInPls-Firefox/install.rdf | grep em:version | sed -n 's/ *<[^>]*>//pg'`
 archive="/var/www/letmeinpls/current/public/extension/letmein-$version.xpi"
-cd /tmp/LetMeInPls
+cd /tmp/LetMeInPls-Firefox
 zip -r $archive *
 cd /var/www/letmeinpls/current
-rm -rf /tmp/LetMeInPls
+rm -rf /tmp/LetMeInPls-Firefox
