@@ -3,7 +3,7 @@ ssh_options[:forward_agent] = true
 
 set :application, "Let Me In, Pls!"
 set :repository,  "git@github.com:shadchnev/LetMeInPls.git"
-set :deploy_to, "/var/www/letmein"
+set :deploy_to, "/var/www/letmeinpls"
 set :scm, "git"
 set :user, "deploy"
 set :branch, "master"

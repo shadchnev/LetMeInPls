@@ -1,10 +1,10 @@
 #/bin/bash
-rm -f /var/www/letmein/current/public/extension/letmein*.xpi
+rm -f /var/www/letmeinpls/current/public/extension/letmein*.xpi
 cd /tmp
 git clone git@github.com:shadchnev/LetMeInPls.git
-version=`cat /tmp/letmein/install.rdf | grep em:version | sed -n 's/ *<[^>]*>//pg'`
-archive="/var/www/letmein/current/public/extension/letmein-$version.xpi"
-cd /tmp/letmein
+version=`cat /tmp/LetMeInPls/install.rdf | grep em:version | sed -n 's/ *<[^>]*>//pg'`
+archive="/var/www/letmeinpls/current/public/extension/letmein-$version.xpi"
+cd /tmp/LetMeInPls
 zip -r $archive *
-cd /var/www/letmein/current
-rm -rf /tmp/letmein
+cd /var/www/letmeinpls/current
+rm -rf /tmp/LetMeInPls
