@@ -1,0 +1,11 @@
+<h1>Let me in, pls!</h1>
+
+<h2>Sites</h2>
+<% @sites.each do |site| %>
+  <h3><%= site.name %></h3>
+  <ul>
+  <% site.accounts.each do |account| %>
+    <li><%= account.login %> / <%= account.password%></li>
+  <% end %>
+  </ul>
+<% end %>

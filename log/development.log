@@ -1,0 +1,424 @@
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2009-06-03 19:22:11) [GET]
+
+ActionController::UnknownAction (No action responded to index. Actions: ):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2009-06-03 19:22:38) [GET]
+Rendering welcome/index
+Completed in 9ms (View: 7, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2009-06-03 20:19:27) [GET]
+  [4;36;1mSite Load (0.0ms)[0m   [0;1mSQLite3::SQLException: no such table: sites: SELECT * FROM "sites" [0m
+
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such table: sites: SELECT * FROM "sites" ):
+  app/controllers/welcome_controller.rb:4:in `index'
+
+Rendered rescues/_trace (49.2ms)
+Rendered rescues/_request_and_response (2.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (1.9ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (1.3ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateSites (20090603171355)
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateSites (20090603171355)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCREATE TABLE "sites" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "url" varchar(255), "regex" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090603171355')[0m
+Migrating to CreateAccounts (20090603171525)
+  [4;35;1mSQL (0.4ms)[0m   [0mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "login" varchar(255), "password" varchar(255), "site_id" integer, "up" integer, "down" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090603171525')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("accounts")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("sites")[0m
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2009-06-03 20:20:19) [GET]
+  [4;36;1mSite Load (0.5ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering welcome/index
+Completed in 62ms (View: 6, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSite Create (0.4ms)[0m   [0;1mINSERT INTO "sites" ("name", "regex", "updated_at", "url", "created_at") VALUES('VKontakte.ru', NULL, '2009-06-03 19:28:58', 'http://www.vkontakte.ru/', '2009-06-03 19:28:58')[0m
+  [4;35;1mSite Load (0.7ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."id" = 1) [0m
+  [4;36;1mAccount Create (0.4ms)[0m   [0;1mINSERT INTO "accounts" ("site_id", "updated_at", "down", "up", "login", "password", "created_at") VALUES(1, '2009-06-03 19:29:31', NULL, NULL, 'letmeinpls', 'letmeinpls', '2009-06-03 19:29:31')[0m
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2009-06-03 20:29:38) [GET]
+  [4;35;1mSite Load (0.7ms)[0m   [0mSELECT * FROM "sites" [0m
+Rendering welcome/index
+  [4;36;1mAccount Load (0.5ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts".site_id = 1) [0m
+Completed in 29ms (View: 21, DB: 1) | 200 OK [http://localhost/]
+  [4;36;1mSite Load (0.3ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."id" = 1) [0m
+  [4;35;1mSite Update (1.1ms)[0m   [0mUPDATE "sites" SET "url" = 'vkontakte.ru', "updated_at" = '2009-06-03 21:01:29' WHERE "id" = 1[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-03 22:05:29) [GET]
+  Parameters: {"url"=>"http://localhost:3000/"}
+
+ActionController::RoutingError (No route matches "/sites/search" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-03 22:06:11) [GET]
+  Parameters: {"url"=>"http://vkontakte.ru/"}
+
+ActionController::RoutingError (No route matches "/sites/search" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#search (for 127.0.0.1 at 2009-06-03 22:06:46) [GET]
+  Parameters: {"url"=>"http://vkontakte.ru/"}
+
+NameError (uninitialized constant SitesController):
+  
+
+Rendered rescues/_trace (38.6ms)
+Rendered rescues/_request_and_response (1.7ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SiteController#search (for 127.0.0.1 at 2009-06-03 22:06:59) [GET]
+  Parameters: {"url"=>"http://vkontakte.ru/"}
+  [4;36;1mSite Load (0.3ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."url" = 'vkontakte.ru') LIMIT 1[0m
+  [4;35;1mAccount Load (0.7ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts".site_id = 1) [0m
+Completed in 86ms (View: 4, DB: 1) | 200 OK [http://localhost/sites/search?url=http%3A%2F%2Fvkontakte.ru%2F]
+
+
+Processing SiteController#search (for 127.0.0.1 at 2009-06-03 22:10:45) [GET]
+  Parameters: {"url"=>"about:blank"}
+Rendering site/search
+Completed in 6ms (View: 3, DB: 0) | 200 OK [http://localhost/sites/search?url=about%3Ablank]
+
+
+Processing SiteController#search (for 127.0.0.1 at 2009-06-03 22:10:46) [GET]
+  Parameters: {"url"=>"about:blank"}
+Rendering site/search
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://localhost/sites/search?url=about%3Ablank]
+
+
+Processing SiteController#search (for 127.0.0.1 at 2009-06-03 22:11:20) [GET]
+  Parameters: {"url"=>"about:blank"}
+Rendering site/search
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://localhost/sites/search?url=about%3Ablank]
+
+
+Processing SiteController#search (for 127.0.0.1 at 2009-06-03 22:11:20) [GET]
+  Parameters: {"url"=>"about:blank"}
+Rendering site/search
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://localhost/sites/search?url=about%3Ablank]
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2009-06-03 22:11:25) [GET]
+  [4;36;1mSite Load (1.4ms)[0m   [0;1mSELECT * FROM "sites" [0m
+Rendering welcome/index
+  [4;35;1mAccount Load (0.3ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts".site_id = 1) [0m
+Completed in 22ms (View: 15, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing SiteController#search (for 127.0.0.1 at 2009-06-03 22:11:25) [GET]
+  Parameters: {"url"=>"http://localhost:3000/"}
+  [4;36;1mSite Load (0.2ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."url" = 'localhost:3000') LIMIT 1[0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.accounts):
+  app/controllers/site_controller.rb:12:in `search'
+  app/controllers/site_controller.rb:10:in `search'
+
+Rendered rescues/_trace (48.8ms)
+Rendered rescues/_request_and_response (1.8ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SiteController#search (for 127.0.0.1 at 2009-06-03 22:12:04) [GET]
+  Parameters: {"url"=>"http://vkontakte.ru/login.php?m=1"}
+  [4;35;1mSite Load (0.3ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."url" = 'vkontakte.ru') LIMIT 1[0m
+  [4;36;1mAccount Load (0.3ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts".site_id = 1) [0m
+Completed in 14ms (View: 1, DB: 1) | 200 OK [http://localhost/sites/search?url=http%3A%2F%2Fvkontakte.ru%2Flogin.php%3Fm%3D1]
+
+
+Processing SiteController#search (for 127.0.0.1 at 2009-06-03 22:12:42) [GET]
+  Parameters: {"url"=>"http://localhost:3000/"}
+  [4;35;1mSite Load (0.1ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."url" = 'localhost:3000') LIMIT 1[0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.accounts):
+  app/controllers/site_controller.rb:12:in `search'
+  app/controllers/site_controller.rb:10:in `search'
+
+Rendered rescues/_trace (44.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SiteController#search (for 127.0.0.1 at 2009-06-04 07:36:45) [GET]
+  Parameters: {"url"=>"about:blank"}
+Rendering site/search
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://localhost/sites/search?url=about%3Ablank]
+
+
+Processing SiteController#search (for 127.0.0.1 at 2009-06-04 07:36:45) [GET]
+  Parameters: {"url"=>"about:blank"}
+Rendering site/search
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://localhost/sites/search?url=about%3Ablank]
+
+
+Processing SiteController#search (for 127.0.0.1 at 2009-06-04 07:36:52) [GET]
+  Parameters: {"url"=>"http://www.eapps.com/"}
+  [4;36;1mSite Load (0.1ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."url" = 'eapps.com') LIMIT 1[0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.accounts):
+  app/controllers/site_controller.rb:12:in `search'
+  app/controllers/site_controller.rb:10:in `search'
+
+Rendered rescues/_trace (53.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SiteController#search (for 127.0.0.1 at 2009-06-04 07:37:10) [GET]
+  Parameters: {"url"=>"http://www.eapps.com/Docs/VPSStandardPrices.jsp"}
+  [4;35;1mSite Load (0.2ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."url" = 'eapps.com') LIMIT 1[0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.accounts):
+  app/controllers/site_controller.rb:12:in `search'
+  app/controllers/site_controller.rb:10:in `search'
+
+Rendered rescues/_trace (121.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SiteController#search (for 127.0.0.1 at 2009-06-04 07:37:54) [GET]
+  Parameters: {"url"=>"https://signup.eapps.com/store/index.php"}
+Rendering site/search
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://localhost/sites/search?url=https%3A%2F%2Fsignup.eapps.com%2Fstore%2Findex.php]
+
+
+Processing SiteController#search (for 127.0.0.1 at 2009-06-04 07:38:15) [GET]
+  Parameters: {"url"=>"https://signup.eapps.com/store/domains.php"}
+Rendering site/search
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://localhost/sites/search?url=https%3A%2F%2Fsignup.eapps.com%2Fstore%2Fdomains.php]
+
+
+Processing SiteController#search (for 127.0.0.1 at 2009-06-04 07:38:30) [GET]
+  Parameters: {"url"=>"https://signup.eapps.com/store/plans.php"}
+Rendering site/search
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://localhost/sites/search?url=https%3A%2F%2Fsignup.eapps.com%2Fstore%2Fplans.php]
+
+
+Processing SiteController#search (for 127.0.0.1 at 2009-06-04 07:39:13) [GET]
+  Parameters: {"url"=>"https://signup.eapps.com/store/addons.php"}
+Rendering site/search
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://localhost/sites/search?url=https%3A%2F%2Fsignup.eapps.com%2Fstore%2Faddons.php]
+
+
+Processing SiteController#search (for 127.0.0.1 at 2009-06-04 07:40:25) [GET]
+  Parameters: {"url"=>"https://signup.eapps.com/store/sign_in.php"}
+Rendering site/search
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://localhost/sites/search?url=https%3A%2F%2Fsignup.eapps.com%2Fstore%2Fsign_in.php]
+
+
+Processing SiteController#search (for 127.0.0.1 at 2009-06-04 07:40:36) [GET]
+  Parameters: {"url"=>"https://signup.eapps.com/store/sign_in.php"}
+Rendering site/search
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://localhost/sites/search?url=https%3A%2F%2Fsignup.eapps.com%2Fstore%2Fsign_in.php]
+
+
+Processing SiteController#search (for 127.0.0.1 at 2009-06-04 07:41:40) [GET]
+  Parameters: {"url"=>"about:blank"}
+Rendering site/search
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://localhost/sites/search?url=about%3Ablank]
+
+
+Processing SiteController#search (for 127.0.0.1 at 2009-06-04 07:41:43) [GET]
+  Parameters: {"url"=>"https://cp.eapps.com/cp/login.cgi?ret_url=aHR0cDovL2NwLmVhcHBzLmNvbS9jcC8="}
+Rendering site/search
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://localhost/sites/search?url=https%3A%2F%2Fcp.eapps.com%2Fcp%2Flogin.cgi%3Fret_url%3DaHR0cDovL2NwLmVhcHBzLmNvbS9jcC8%3D]
+
+
+Processing SiteController#search (for 127.0.0.1 at 2009-06-04 07:41:48) [GET]
+  Parameters: {"url"=>"https://cp.eapps.com/cp/login.cgi/act,remind"}
+Rendering site/search
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://localhost/sites/search?url=https%3A%2F%2Fcp.eapps.com%2Fcp%2Flogin.cgi%2Fact%2Cremind]
+
+
+Processing SiteController#search (for 127.0.0.1 at 2009-06-04 07:41:53) [GET]
+  Parameters: {"url"=>"https://cp.eapps.com/cp/login.cgi/act,remind"}
+Rendering site/search
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://localhost/sites/search?url=https%3A%2F%2Fcp.eapps.com%2Fcp%2Flogin.cgi%2Fact%2Cremind]
+
+
+Processing SiteController#search (for 127.0.0.1 at 2009-06-04 07:42:13) [GET]
+  Parameters: {"url"=>"https://cp.eapps.com/cp/login.cgi/act,reset/just_now,1/email,evgeny@kappaprime.com"}
+Rendering site/search
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://localhost/sites/search?url=https%3A%2F%2Fcp.eapps.com%2Fcp%2Flogin.cgi%2Fact%2Creset%2Fjust_now%2C1%2Femail%2Cevgeny%40kappaprime.com]
+
+
+Processing SiteController#search (for 127.0.0.1 at 2009-06-04 07:42:34) [GET]
+  Parameters: {"url"=>"https://cp.eapps.com/cp/login.cgi/act,remind"}
+Rendering site/search
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://localhost/sites/search?url=https%3A%2F%2Fcp.eapps.com%2Fcp%2Flogin.cgi%2Fact%2Cremind]
+
+
+Processing SiteController#search (for 127.0.0.1 at 2009-06-04 07:42:42) [GET]
+  Parameters: {"url"=>"https://cp.eapps.com/cp/login.cgi/act,remind"}
+Rendering site/search
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://localhost/sites/search?url=https%3A%2F%2Fcp.eapps.com%2Fcp%2Flogin.cgi%2Fact%2Cremind]
+
+
+Processing SiteController#search (for 127.0.0.1 at 2009-06-04 07:42:49) [GET]
+  Parameters: {"url"=>"https://signup.eapps.com/store/sign_in.php"}
+Rendering site/search
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://localhost/sites/search?url=https%3A%2F%2Fsignup.eapps.com%2Fstore%2Fsign_in.php]
+
+
+Processing SiteController#search (for 127.0.0.1 at 2009-06-04 07:43:18) [GET]
+  Parameters: {"url"=>"https://signup.eapps.com/store/sign_in.php"}
+Rendering site/search
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://localhost/sites/search?url=https%3A%2F%2Fsignup.eapps.com%2Fstore%2Fsign_in.php]
+
+
+Processing SiteController#search (for 127.0.0.1 at 2009-06-04 07:43:40) [GET]
+  Parameters: {"url"=>"https://signup.eapps.com/store/configure.php"}
+Rendering site/search
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://localhost/sites/search?url=https%3A%2F%2Fsignup.eapps.com%2Fstore%2Fconfigure.php]
+
+
+Processing SiteController#search (for 127.0.0.1 at 2009-06-04 07:43:42) [GET]
+  Parameters: {"url"=>"http://localhost:3000/"}
+  [4;36;1mSite Load (0.2ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."url" = 'localhost:3000') LIMIT 1[0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.accounts):
+  app/controllers/site_controller.rb:12:in `search'
+  app/controllers/site_controller.rb:10:in `search'
+
+Rendered rescues/_trace (43.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SiteController#search (for 127.0.0.1 at 2009-06-04 07:43:42) [GET]
+  Parameters: {"url"=>"https://signup.eapps.com/store/configure.php"}
+Rendering site/search
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://localhost/sites/search?url=https%3A%2F%2Fsignup.eapps.com%2Fstore%2Fconfigure.php]
+
+
+Processing SiteController#search (for 127.0.0.1 at 2009-06-04 07:44:36) [GET]
+  Parameters: {"url"=>"https://signup.eapps.com/store/shopping_cart.php"}
+Rendering site/search
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://localhost/sites/search?url=https%3A%2F%2Fsignup.eapps.com%2Fstore%2Fshopping_cart.php]
+
+
+Processing SiteController#search (for 127.0.0.1 at 2009-06-04 07:45:11) [GET]
+  Parameters: {"url"=>"https://signup.eapps.com/store/payment.php"}
+Rendering site/search
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://localhost/sites/search?url=https%3A%2F%2Fsignup.eapps.com%2Fstore%2Fpayment.php]
+
+
+Processing SiteController#search (for 127.0.0.1 at 2009-06-04 07:45:32) [GET]
+  Parameters: {"url"=>"https://signup.eapps.com/store/payment.php"}
+Rendering site/search
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://localhost/sites/search?url=https%3A%2F%2Fsignup.eapps.com%2Fstore%2Fpayment.php]
+
+
+Processing SiteController#search (for 127.0.0.1 at 2009-06-04 07:45:35) [GET]
+  Parameters: {"url"=>"https://cp.eapps.com/hspc/common/02"}
+Rendering site/search
+Completed in 6ms (View: 3, DB: 0) | 200 OK [http://localhost/sites/search?url=https%3A%2F%2Fcp.eapps.com%2Fhspc%2Fcommon%2F02]
+
+
+Processing SiteController#search (for 127.0.0.1 at 2009-06-04 07:45:42) [GET]
+  Parameters: {"url"=>"https://www.paypal.com/us/cgi-bin/webscr?cmd=_flow&SESSION=VenRwJv6OTB728clpLrRDaQ0wnDeblvl7joJFHgbzy9u__6Nmxz2XsCoOo4&dispatch=50a222a57771920b6a3d7b606239e4d529b525e0b7e69bf0224adecfb0124e9bdd7275a399ffdb50357d51bfcb4404a7b924bdd697058cea"}
+Rendering site/search
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://localhost/sites/search?url=https%3A%2F%2Fwww.paypal.com%2Fus%2Fcgi-bin%2Fwebscr%3Fcmd%3D_flow%26SESSION%3DVenRwJv6OTB728clpLrRDaQ0wnDeblvl7joJFHgbzy9u__6Nmxz2XsCoOo4%26dispatch%3D50a222a57771920b6a3d7b606239e4d529b525e0b7e69bf0224adecfb0124e9bdd7275a399ffdb50357d51bfcb4404a7b924bdd697058cea]
+
+
+Processing SiteController#search (for 127.0.0.1 at 2009-06-04 07:46:50) [GET]
+  Parameters: {"url"=>"https://www.paypal.com/uk/cgi-bin/webscr?cmd=_flow&SESSION=F05z29Ssk3zytZ5ZUdsI6u2ZhUqnLSjkO1ykRmGpn8P7fFCazeBhkG3U01C&dispatch=50a222a57771920b6a3d7b606239e4d529b525e0b7e69bf0224adecfb0124e9bdd7275a399ffdb50357d51bfcb4404a7b924bdd697058cea"}
+Rendering site/search
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://localhost/sites/search?url=https%3A%2F%2Fwww.paypal.com%2Fuk%2Fcgi-bin%2Fwebscr%3Fcmd%3D_flow%26SESSION%3DF05z29Ssk3zytZ5ZUdsI6u2ZhUqnLSjkO1ykRmGpn8P7fFCazeBhkG3U01C%26dispatch%3D50a222a57771920b6a3d7b606239e4d529b525e0b7e69bf0224adecfb0124e9bdd7275a399ffdb50357d51bfcb4404a7b924bdd697058cea]
+
+
+Processing SiteController#search (for 127.0.0.1 at 2009-06-04 07:46:59) [GET]
+  Parameters: {"url"=>"https://www.paypal.com/uk/cgi-bin/webscr?cmd=_flow&SESSION=n04Mpr-nO-MUshxxl9-bqchV0E98O7p16oEo-PZ80un9nBgua5Y_lZaUoNm&dispatch=50a222a57771920b6a3d7b606239e4d529b525e0b7e69bf0224adecfb0124e9bdd7275a399ffdb50357d51bfcb4404a7b924bdd697058cea"}
+Rendering site/search
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://localhost/sites/search?url=https%3A%2F%2Fwww.paypal.com%2Fuk%2Fcgi-bin%2Fwebscr%3Fcmd%3D_flow%26SESSION%3Dn04Mpr-nO-MUshxxl9-bqchV0E98O7p16oEo-PZ80un9nBgua5Y_lZaUoNm%26dispatch%3D50a222a57771920b6a3d7b606239e4d529b525e0b7e69bf0224adecfb0124e9bdd7275a399ffdb50357d51bfcb4404a7b924bdd697058cea]
+
+
+Processing SiteController#search (for 127.0.0.1 at 2009-06-04 07:47:08) [GET]
+  Parameters: {"url"=>"https://cp.eapps.com/hspc/common/01/ref_no,2009-06-04-709686-5ae7986830032b6/template,paypalstandart/status,approved/suffix,result?mc_gross=24.99&invoice=2009-06-04-709686-5ae7986830032b6&protection_eligibility=Ineligible&payer_id=VHQBDUS7JKMRJ&tax=0.00&payment_date=23%3A46%3A54+Jun+03%2C+2009+PDT&payment_status=Completed&charset=windows-1252&first_name=Evgeny&mc_fee=1.27&notify_version=2.8&custom=&payer_status=verified&business=customerservice%40eapps.com&quantity=1&payer_email=Evgeny.Shadchnev%40gmail.com&verify_sign=AnNMT7nRteKS2auTkxdsRz9rRvvPADQQyrBAcbJqb1ousoJNLUzs539q&txn_id=2H850239F6604020V&payment_type=instant&last_name=Shadchnev&receiver_email=customerservice%40eapps.com&payment_fee=1.27&receiver_id=YVVMQJEK3LDJN&txn_type=web_accept&item_name=Order+on+the+Container+creation&mc_currency=USD&item_number=&residence_country=GB&handling_amount=0.00&transaction_subject=Order+on+the+Container+creation&payment_gross=24.99&shipping=0.00&merchant_return_link=Return+to+Strategic+Systems+Consulting%2C+Inc."}
+Rendering site/search
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://localhost/sites/search?url=https%3A%2F%2Fcp.eapps.com%2Fhspc%2Fcommon%2F01%2Fref_no%2C2009-06-04-709686-5ae7986830032b6%2Ftemplate%2Cpaypalstandart%2Fstatus%2Capproved%2Fsuffix%2Cresult%3Fmc_gross%3D24.99%26invoice%3D2009-06-04-709686-5ae7986830032b6%26protection_eligibility%3DIneligible%26payer_id%3DVHQBDUS7JKMRJ%26tax%3D0.00%26payment_date%3D23%253A46%253A54%2BJun%2B03%252C%2B2009%2BPDT%26payment_status%3DCompleted%26charset%3Dwindows-1252%26first_name%3DEvgeny%26mc_fee%3D1.27%26notify_version%3D2.8%26custom%3D%26payer_status%3Dverified%26business%3Dcustomerservice%2540eapps.com%26quantity%3D1%26payer_email%3DEvgeny.Shadchnev%2540gmail.com%26verify_sign%3DAnNMT7nRteKS2auTkxdsRz9rRvvPADQQyrBAcbJqb1ousoJNLUzs539q%26txn_id%3D2H850239F6604020V%26payment_type%3Dinstant%26last_name%3DShadchnev%26receiver_email%3Dcustomerservice%2540eapps.com%26payment_fee%3D1.27%26receiver_id%3DYVVMQJEK3LDJN%26txn_type%3Dweb_accept%26item_name%3DOrder%2Bon%2Bthe%2BContainer%2Bcreation%26mc_currency%3DUSD%26item_number%3D%26residence_country%3DGB%26handling_amount%3D0.00%26transaction_subject%3DOrder%2Bon%2Bthe%2BContainer%2Bcreation%26payment_gross%3D24.99%26shipping%3D0.00%26merchant_return_link%3DReturn%2Bto%2BStrategic%2BSystems%2BConsulting%252C%2BInc.]
+
+
+Processing SiteController#search (for 127.0.0.1 at 2009-06-04 07:47:09) [GET]
+  Parameters: {"url"=>"https://signup.eapps.com/hspc/payment.php?fsid=fce73a4da553864176b675c34108f96d&status=2&plugin_id=3&message="}
+Rendering site/search
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://localhost/sites/search?url=https%3A%2F%2Fsignup.eapps.com%2Fhspc%2Fpayment.php%3Ffsid%3Dfce73a4da553864176b675c34108f96d%26status%3D2%26plugin_id%3D3%26message%3D]
+
+
+Processing SiteController#search (for 127.0.0.1 at 2009-06-04 07:48:47) [GET]
+  Parameters: {"url"=>"http://localhost:3000/"}
+  [4;35;1mSite Load (0.1ms)[0m   [0mSELECT * FROM "sites" WHERE ("sites"."url" = 'localhost:3000') LIMIT 1[0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.accounts):
+  app/controllers/site_controller.rb:12:in `search'
+  app/controllers/site_controller.rb:10:in `search'
+
+Rendered rescues/_trace (117.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SiteController#search (for 127.0.0.1 at 2009-06-04 07:50:51) [GET]
+  Parameters: {"url"=>"about:blank"}
+Rendering site/search
+Completed in 4ms (View: 1, DB: 0) | 200 OK [http://localhost/sites/search?url=about%3Ablank]
+
+
+Processing SiteController#search (for 127.0.0.1 at 2009-06-04 07:51:10) [GET]
+  Parameters: {"url"=>"http://uk.tiffany.com/Shopping/Item.aspx?search_params=s+5-p+1-c+573050-r+201323338-x+-n+6-ri+-ni+0-t&mysid2=&fromgrid=1&cid=573050&lstacttm=&partner=&siregid=&sku=24466922&reasontosignin=&custlastvisit=&cookietest=1&targeturl=&regsignedin=&assortmentid=&originurl=&mcat=148204"}
+  [4;36;1mSite Load (0.1ms)[0m   [0;1mSELECT * FROM "sites" WHERE ("sites"."url" = 'uk.tiffany.com') LIMIT 1[0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.accounts):
+  app/controllers/site_controller.rb:12:in `search'
+  app/controllers/site_controller.rb:10:in `search'
+
+Rendered rescues/_trace (46.9ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)

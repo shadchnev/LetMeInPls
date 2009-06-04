@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: 
+  url: 
+  regex: MyString
+
+two:
+  name: 
+  url: 
+  regex: MyString
