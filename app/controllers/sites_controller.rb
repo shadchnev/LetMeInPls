@@ -1,10 +1,10 @@
 class SitesController < ApplicationController
   
   def search
-    address = params[:url]
-    match = Site.parse(address)
-    render :text => '' and return unless match
-    site = Site.find_by_url(match[:full_url])
+    domain = params["url"].domain if params["url"]
+    render :text => '' and return unless domain
+    site = Site.find_by_domain(domain)
+    render :text => '' and return unless site
     data = []
     site.accounts.each do |account|
       data << {:id => account.id, :login => account.login, :password => account.password}
@@ -17,9 +17,10 @@ class SitesController < ApplicationController
   end
   
   def create
+    domain = params["site"]["domain"].domain if params["site"]["domain"]
     Site.create do |site|
-      site.url = params["site"]["url"]      
-    end if params["site"]["url"]
+      site.domain = domain
+    end if domain
     redirect_to '/'
   end
   

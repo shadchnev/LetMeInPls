@@ -23,7 +23,7 @@ ActiveRecord::Schema.define(:version => 20090604070114) do
   end
 
   create_table "sites", :force => true do |t|
-    t.string   "url"
+    t.string   "domain"
     t.string   "regex"
     t.datetime "created_at"
     t.datetime "updated_at"

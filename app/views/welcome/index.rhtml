@@ -1,6 +1,6 @@
 <h3><%= @sites.size %> sites with passwords</h3>
 <% @sites.each do |site| %>
-  <h4><%= link_to site.name, site.url %></h4>
+  <h4><%= link_to site.name, 'http://' + site.domain %></h4>
   <ul>
   <% site.accounts.each do |account| %>
     <li>      
@@ -38,7 +38,7 @@
   <% form_for @site do |f| %>
   <p>
       Address (e.g. http://www.vkontakte.ru/):<br />
-      <%= f.text_field :url %>
+      <%= f.text_field :domain %>
   </p>
   <p>
       <%= submit_tag %>
